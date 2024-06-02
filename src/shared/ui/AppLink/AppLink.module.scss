@@ -1,0 +1,14 @@
+.AppLink {
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+}
+
+.secondary {
+  color: var(--inverted-primary-color);
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  &:hover {
+    color: var(--inverted-secondary-color);
+  }
+}

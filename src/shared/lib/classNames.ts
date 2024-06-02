@@ -1,6 +1,10 @@
 type TMods = Record<string, boolean | string>;
 
-const classNames = (cls: string, mods: TMods, additional: string[]): string => {
+const classNames = (
+  cls: string,
+  mods: TMods = {},
+  additional: string[] = []
+): string => {
   return [
     cls,
     ...additional,

@@ -1,0 +1,12 @@
+.ThemeSwitcher {
+}
+
+.icon {
+  &.light {
+    color: #ffc700;
+  }
+
+  &.dark {
+    color: var(--inverted-primary-color);
+  }
+}
