@@ -1,10 +1,10 @@
 import { Link, Route, Routes } from 'react-router-dom';
-import { MainAsync } from './pages/Main/Main.async';
-import { AboutAsync } from './pages/About/About.async';
 import { Suspense } from 'react';
 import './styles/index.scss';
-import { useTheme } from './theme/useTheme';
-import classNames from './helpers/classNames';
+import { useTheme } from './providers/ThemeProvider';
+import classNames from 'shared/lib/classNames';
+import { MainPage } from 'pages/Main';
+import { AboutPage } from 'pages/About';
 
 enum RoutePaths {
   home = '/',
@@ -21,8 +21,8 @@ const App = () => {
       <Link to={RoutePaths.about}>About</Link>
       <Suspense fallback={<div>Загрузка...</div>}>
         <Routes>
-          <Route path={RoutePaths.home} element={<MainAsync />} />
-          <Route path={RoutePaths.about} element={<AboutAsync />} />
+          <Route path={RoutePaths.home} element={<MainPage />} />
+          <Route path={RoutePaths.about} element={<AboutPage />} />
         </Routes>
       </Suspense>
     </div>
