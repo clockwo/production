@@ -7,13 +7,13 @@ interface IUseThemeResult {
 }
 
 export const useTheme = (): IUseThemeResult => {
-  const { theme, setTheme } = useContext(ThemeContext);
+    const { theme, setTheme } = useContext(ThemeContext);
 
-  const toggleTheme = () => {
-    const updatedTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
-    localStorage.setItem(LOCAL_STORAGE_THEME_KEY, updatedTheme);
-    setTheme(updatedTheme);
-  };
+    const toggleTheme = () => {
+        const updatedTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK;
+        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, updatedTheme);
+        setTheme(updatedTheme);
+    };
 
-  return { theme, toggleTheme };
+    return { theme, toggleTheme };
 };
