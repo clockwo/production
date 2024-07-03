@@ -9,6 +9,17 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
         exclude: /node_modules/,
     };
 
+    const babelLoader = {
+        test: /\.(js|jsx|tsx)/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: ['@babel/preset-env'],
+            },
+        },
+    };
+
     const scssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
@@ -17,6 +28,7 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
                 loader: 'css-loader',
                 options: {
                     modules: {
+                        // eslint-disable-next-line max-len
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
                         localIdentName: isDev
                             ? '[path][name]__[local]--[hash:base64:5]'
@@ -42,5 +54,5 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
         ],
     };
 
-    return [fileLoader, svgLoader, typescriptLoader, scssLoader];
+    return [fileLoader, svgLoader, babelLoader, typescriptLoader, scssLoader];
 }
