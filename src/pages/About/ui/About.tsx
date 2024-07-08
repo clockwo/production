@@ -4,7 +4,9 @@ const About = () => {
     const { t } = useTranslation();
 
     return (
-        <div>{t('About')}</div>
+        <div>
+            {t('About')}
+        </div>
     );
 };
 

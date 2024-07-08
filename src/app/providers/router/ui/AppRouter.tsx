@@ -1,10 +1,19 @@
 import { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { routeConfig } from 'shared/config/routeConfig/routeConfig';
+import { PageLoader } from 'widgets/PageLoader';
+import { SpinnerLoader } from 'shared/ui/SpinnerLoader/SpinnerLoader';
 
 function AppRouter() {
     return (
-        <Suspense fallback={<div>Загрузка...</div>}>
+        <Suspense fallback={(
+            <div className="flex-wrapper">
+                <PageLoader>
+                    <SpinnerLoader />
+                </PageLoader>
+            </div>
+        )}
+        >
             <Routes>
                 {Object.values(routeConfig).map(({ element, path }) => (
                     <Route
