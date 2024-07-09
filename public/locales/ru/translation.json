@@ -3,5 +3,8 @@
     "Test Example": "Тестовый пример",
     "Main": "Главная",
     "About": "О нас",
-    "Page Not Found": "Страница не найдена"
+    "Page Not Found": "Страница не найдена",
+    "Trow Error": "Выбросить ошибку",
+    "Something went wrong": "Что-то пошло не так",
+    "Reload page": "Перезагрузить страницу"
 }

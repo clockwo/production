@@ -4,16 +4,7 @@
  */
 
 export default {
-    // All imported modules in your tests should be mocked automatically
-    // automock: false,
 
-    // Stop running tests after `n` failures
-    // bail: 0,
-
-    // The directory where Jest should store its cached dependency information
-    // cacheDirectory: "/tmp/jest_rs",
-
-    // Automatically clear mock calls, instances and results before every test
     clearMocks: true,
     testEnvironment: 'jsdom',
 
@@ -22,8 +13,10 @@ export default {
     ],
 
     moduleDirectories: [
-        'node_modules',
+        'node_modules', 'src',
     ],
+
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
 
     moduleFileExtensions: [
         'js',
