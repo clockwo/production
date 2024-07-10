@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import classNames from 'shared/lib/classNames';
+import classNames from 'shared/lib/classNames/classNames';
 import cls from './SpinnerLoader.module.scss';
 
 interface SpinnerLoaderProps {
