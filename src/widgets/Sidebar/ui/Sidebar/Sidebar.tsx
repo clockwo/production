@@ -23,7 +23,13 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             ])}
             data-testid="sidebar"
         >
-            <Button data-testid="sidebar-toggle" onClick={onToggle}>Переключить</Button>
+            <Button
+                data-testid="sidebar-toggle"
+                mods={{ inverted: true }}
+                onClick={onToggle}
+            >
+                Переключить
+            </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LanguageSwitcher />

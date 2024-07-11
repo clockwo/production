@@ -13,5 +13,5 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ className }) => {
         await i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
 
-    return <Button onClick={onToggle}>{t('Translate')}</Button>;
+    return <Button mods={{ inverted: true }} onClick={onToggle}>{t('Translate')}</Button>;
 };

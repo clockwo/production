@@ -1,15 +1,16 @@
 import { ButtonHTMLAttributes, FC } from 'react';
-import classNames from 'shared/lib/classNames/classNames';
+import classNames, { TMods } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
 export enum ThemeButton {
     CLEAR = 'clear',
-    PRIMARY = 'primary',
+    OUTLINE = 'outline'
 }
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     theme?: ThemeButton;
+    mods?: TMods;
 }
 
 export const Button: FC<IButtonProps> = (props) => {
@@ -17,12 +18,17 @@ export const Button: FC<IButtonProps> = (props) => {
         className,
         children,
         theme = ThemeButton.CLEAR,
+        mods,
         ...otherProps
     } = props;
     return (
         <button
             type="button"
-            className={classNames(cls.Button, {}, [className, cls[theme]])}
+            className={classNames(
+                cls.Button,
+                { ...mods },
+                [className, cls[theme]],
+            )}
             {...otherProps}
         >
             {children}

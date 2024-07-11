@@ -1,4 +1,4 @@
-type TMods = Record<string, boolean | string>;
+export type TMods = Record<string, boolean | string>;
 
 const classNames = (
     cls: string,
