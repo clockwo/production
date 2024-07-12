@@ -10,6 +10,36 @@
   width: var(--sidebar-collapsed-width);
 }
 
+.collapsedButton {
+  position: absolute;
+  bottom: 21px;
+  right: -40px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-inline: auto;
+  max-width: fit-content;
+  margin-top: 1.25rem;
+
+  span {
+    min-width: 8ch;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  fill: var(--background-color);
+}
+
 .switchers {
   position: absolute;
   bottom: 1.25rem;
@@ -17,4 +47,9 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+
+  &.switchersCollapsed {
+    flex-direction: column;
+    align-items: center;
+  }
 }
