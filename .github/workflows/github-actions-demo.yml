@@ -19,22 +19,20 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - uses: oven-sh/setup-bun@v2
-
       - name: Install dependencies
-        run: bun install
+        run: npm ci
 
       - name: Build production project
-        run: bun run prod
+        run: npm run prod
 
       - name: Lint TypeScript
-        run: bun run lint:ts
+        run: npm run lint:ts
 
       - name: Run unit tests
-        run: bun run test:unit
+        run: npm run test:unit
 
       - name: build storybook
-        run: bun run storybook:build
+        run: npm run storybook:build
 
       - name: screenshot testing
-        run: bun run test:ui:ci
+        run: npm run test:ui:ci
