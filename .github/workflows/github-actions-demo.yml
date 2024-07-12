@@ -19,19 +19,20 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Install Bun
+        run: |
+          curl -fsSL https://bun.sh/install | bash
+          export BUN_INSTALL="$HOME/.bun"
+          export PATH="$BUN_INSTALL/bin:$PATH"
+
       - name: Install dependencies
-        run: npm install
+        run: bun install
 
       - name: Build production project
-        run: npm run prod
+        run: bun run prod
 
       - name: Lint TypeScript
-        run: npm run lint:ts
+        run: bun run lint:ts
 
       - name: Run unit tests
-        run: npm run test:unit
-
-      - name: Display node and npm version
-        run: |
-          node -v
-          npm -v
+        run: bun run test:unit
