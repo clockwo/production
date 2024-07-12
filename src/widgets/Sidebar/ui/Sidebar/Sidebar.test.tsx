@@ -5,12 +5,12 @@ import { componentRender } from 'shared/lib/tests/componentRender/componentRende
 
 describe('Sidebar element test', () => {
     test('should render correctly', () => {
-        componentRender(<Sidebar />, { route: '/' });
+        componentRender(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
 
     test('should collapsed', () => {
-        componentRender(<Sidebar />, { route: '/' });
+        componentRender(<Sidebar />);
         const toggleButton = screen.getByTestId('sidebar-toggle');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(toggleButton);
