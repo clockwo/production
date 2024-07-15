@@ -4,7 +4,11 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'airbnb'],
+    extends: ['plugin:react/recommended',
+        'plugin:react/jsx-runtime',
+        'airbnb',
+        'plugin:react-hooks/recommended',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -33,6 +37,8 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
     },
     globals: {
         __IS_DEV__: true,
