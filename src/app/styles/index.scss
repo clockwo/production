@@ -4,10 +4,13 @@
 @import 'themes/normal';
 
 
-.app {
-  background-color: var(--background-color);
+body {
   font: var(--font-m);
   color: var(--primary-color);
+}
+
+.app {
+  background-color: var(--background-color);
   min-height: 100vh;
 }
 
