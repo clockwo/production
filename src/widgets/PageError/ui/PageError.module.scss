@@ -6,6 +6,11 @@
   place-items: center;
 }
 
+.title {
+  color: var(--primary-color);
+  margin: 1rem;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
