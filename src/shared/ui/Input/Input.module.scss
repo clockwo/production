@@ -1,0 +1,28 @@
+.Input {
+  color: var(--inverted-primary-color);
+  background-color: var(--inverted-background);
+  outline: none;
+  border: none;
+  padding: 8px 15px;
+
+
+  &.error {
+    outline: 1px solid red;
+  }
+
+  ::placeholder {
+    color: red;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.errorMessage {
+  color: red;
+  font: var(--font-m);
+  margin-left: 15px;
+}

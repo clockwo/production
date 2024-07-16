@@ -21,6 +21,7 @@ export const Modal: FC<ModalProps> = (props: ModalProps) => {
         [cls.visible]: isOpen,
         [cls.close]: isClosing,
     };
+    const [mounted, setMounted] = useState<boolean>(false);
 
     const onCloseHandler = useCallback(() => {
         setIsClosing(true);
@@ -43,23 +44,27 @@ export const Modal: FC<ModalProps> = (props: ModalProps) => {
     useEffect(() => {
         if (isOpen) {
             window.addEventListener('keydown', onEscapeDown);
+            setMounted(true);
         }
 
         return () => {
             clearTimeout(timerRef.current);
             window.removeEventListener('keydown', onEscapeDown);
+            setMounted(false);
         };
     }, [isOpen, onEscapeDown]);
 
     return (
-        <Portal elementNode={document.body}>
-            <div className={classNames(cls.Modal, mods)}>
-                <div className={cls.overlay} onClick={onCloseHandler}>
-                    <div className={cls.content} onClick={onContentClick}>
-                        {children}
+        mounted && (
+            <Portal elementNode={document.body}>
+                <div className={classNames(cls.Modal, mods)}>
+                    <div className={cls.overlay} onClick={onCloseHandler}>
+                        <div className={cls.content} onClick={onContentClick}>
+                            {children}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </Portal>
+            </Portal>
+        )
     );
 };

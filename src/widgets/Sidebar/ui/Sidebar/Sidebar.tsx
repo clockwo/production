@@ -39,7 +39,6 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
                     {!collapsed && <span>{t('About')}</span>}
                 </AppLink>
             </div>
-
             <Button
                 data-testid="sidebar-toggle"
                 square

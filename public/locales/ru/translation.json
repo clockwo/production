@@ -8,5 +8,7 @@
     "Something went wrong": "Что-то пошло не так",
     "Reload page": "Перезагрузить страницу",
     "Short Translate": "Ru",
-    "Login": "Войти"
+    "Login": "Войти",
+    "Email": "почта",
+    "Password": "пароль"
 }
