@@ -10,6 +10,7 @@ export const ThemeDecorator = (
             className={CustomTheme}
             style={{
                 backgroundColor: 'var(--background-color)',
+                color: 'var(--primary-color)',
                 width: '100%',
                 height: '100vh',
             }}
