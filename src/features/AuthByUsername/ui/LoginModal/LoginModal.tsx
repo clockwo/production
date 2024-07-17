@@ -2,8 +2,10 @@ import { Modal } from 'shared/ui/Modal/ui/Modal';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { useModal } from 'shared/hooks/useModal/useModal';
+import { Suspense } from 'react';
+import { SpinnerLoader } from 'shared/ui/SpinnerLoader/SpinnerLoader';
 import cls from './LoginModal.module.scss';
-import { LoginForm } from '../LoginForm/LoginForm';
+import { LoginFormAsync as LoginForm } from '../LoginForm/LoginForm.async';
 
 export const LoginModal = () => {
     const { t } = useTranslation();
@@ -15,7 +17,9 @@ export const LoginModal = () => {
                 {t('Login')}
             </Button>
             <Modal isOpen={isOpen} onClose={setClose}>
-                <LoginForm />
+                <Suspense fallback={<SpinnerLoader />}>
+                    <LoginForm />
+                </Suspense>
             </Modal>
         </div>
 

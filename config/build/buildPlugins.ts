@@ -23,7 +23,7 @@ export function buildPlugins({
 
     ];
 
-    if (isDev) {
+    if (true) {
         plugins.push(new BundleAnalyzerPlugin(
             {
                 openAnalyzer: false,
