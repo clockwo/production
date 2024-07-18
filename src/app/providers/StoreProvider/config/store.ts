@@ -4,8 +4,13 @@ import { userReducer } from 'enitites/User';
 import { createReducerManager } from 'app/providers/StoreProvider/config/ReducerManager';
 import { StateSchema } from './StateSchema';
 
-export const createReduxStore = (initialState?: StateSchema) => {
+export const createReduxStore = (
+    initialState?: StateSchema,
+    asyncReducers?: ReducersMapObject<StateSchema>,
+) => {
     const rootReducers: ReducersMapObject<StateSchema> = {
+        ...asyncReducers,
+        // Not async reducers below
         counter: counterReducer,
         user: userReducer,
     };

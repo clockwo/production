@@ -7,11 +7,11 @@
 
 
   &.error {
-    outline: 1px solid red;
+    outline: 1px solid var(--red-color);
   }
 
   ::placeholder {
-    color: red;
+    color: var(--red-color);
   }
 }
 

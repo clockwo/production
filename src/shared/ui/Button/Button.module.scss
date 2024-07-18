@@ -4,10 +4,12 @@
   padding: 8px 15px;
   display: grid;
   place-content: center;
+  min-height: 40px;
 }
 
 .clear, .clearInverted {
   padding: 0;
+  min-height: unset;
   border: none;
   background: none;
   outline: none;

@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { useModal } from 'shared/hooks/useModal/useModal';
 import { Suspense } from 'react';
 import { SpinnerLoader } from 'shared/ui/SpinnerLoader/SpinnerLoader';
-import cls from './LoginModal.module.scss';
 import { LoginFormAsync as LoginForm } from '../LoginForm/LoginForm.async';
 
 export const LoginModal = () => {
@@ -12,7 +11,7 @@ export const LoginModal = () => {
     const { isOpen, setOpen, setClose } = useModal();
 
     return (
-        <div className={cls.LoginModal}>
+        <div>
             <Button onClick={setOpen} theme={ButtonTheme.CLEAR_INVERTED}>
                 {t('Login')}
             </Button>
