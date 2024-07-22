@@ -3,12 +3,9 @@ import classNames from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { useTranslation } from 'react-i18next';
-import HomeIcon from 'shared/assets/svg/home.svg';
-import AboutIcon from 'shared/assets/svg/about.svg';
 
+import { SidebarItemsList } from 'widgets/Sidebar/model/items';
+import { SidebarItem } from 'widgets/Sidebar/ui/SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -17,7 +14,6 @@ interface SidebarProps {
 
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
-    const { t } = useTranslation();
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
@@ -25,19 +21,21 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
     return (
         <div
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
-                className,
+                className || '',
             ])}
             data-testid="sidebar"
         >
             <div className={cls.links}>
-                <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.main} className={cls.link}>
-                    <HomeIcon className={cls.icon} />
-                    {!collapsed && <span>{t('Main')}</span>}
-                </AppLink>
-                <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about} className={cls.link}>
-                    <AboutIcon className={cls.icon} />
-                    {!collapsed && <span>{t('About')}</span>}
-                </AppLink>
+                {SidebarItemsList.map((item) => (
+                    <SidebarItem
+                        key={item.path}
+                        collapsed={collapsed}
+                        text={item.text}
+                        path={item.path}
+                        Icon={item.Icon}
+                    />
+                ))}
+
             </div>
             <Button
                 data-testid="sidebar-toggle"
@@ -49,7 +47,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             >
                 {collapsed ? '>' : '<'}
             </Button>
-            <div className={classNames(cls.switchers, {}, [collapsed && cls.switchersCollapsed])}>
+            <div className={classNames(cls.switchers, {}, [collapsed ? cls.switchersCollapsed : ''])}>
                 <ThemeSwitcher />
                 <LanguageSwitcher short={collapsed} />
             </div>

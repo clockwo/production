@@ -24,7 +24,7 @@ const getValidationErrorMessage = (status: ValidatePasswordStatus) => {
     }
 };
 
-const specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+const specialCharRegex = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]+/;
 const MIN_PASSWORD_LENGTH = 3;
 
 export const validatePassword = (password: string): IValidateStatus => {

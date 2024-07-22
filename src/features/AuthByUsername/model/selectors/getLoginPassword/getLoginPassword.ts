@@ -3,6 +3,6 @@ import { LoginSchema } from '../../types/loginSchema';
 import { getLoginState } from '../getLoginState/getLoginState';
 
 export const getLoginPassword = createSelector(
-    getLoginState,
-    (login: LoginSchema) => login?.password || '',
+    [getLoginState],
+    (login: LoginSchema | undefined) => login?.password || '',
 );

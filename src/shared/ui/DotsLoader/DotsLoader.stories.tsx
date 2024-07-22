@@ -16,11 +16,11 @@ const Template: ComponentStory<typeof DotsLoader> = (args) => <DotsLoader {...ar
 
 export const Light = Template.bind({});
 Light.args = {
-    theme: 'dark',
+    theme: Theme.DARK,
 };
 
 export const Dark = Template.bind({});
 Dark.args = {
-    theme: 'light',
+    theme: Theme.LIGHT,
 };
 Dark.decorators = [ThemeDecorator({ theme: Theme.DARK })];

@@ -11,7 +11,7 @@ interface INavbarProps {
     className?: string;
 }
 
-export const Navbar: FC<INavbarProps> = ({ className }) => {
+export const Navbar: FC<INavbarProps> = ({ className = '' }) => {
     const dispatch = useDispatch();
     const { t } = useTranslation();
     const userAuth = useSelector(getUserAuth);

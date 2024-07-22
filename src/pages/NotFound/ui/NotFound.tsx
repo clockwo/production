@@ -7,7 +7,7 @@ interface NotFoundProps {
     className?: string;
 }
 
-const NotFound: FC<NotFoundProps> = ({ className }) => {
+const NotFound: FC<NotFoundProps> = ({ className = '' }) => {
     const { t } = useTranslation();
 
     return (

@@ -1,7 +1,7 @@
 import {
-    FC, MouseEvent, ReactNode, useCallback, useEffect, useRef, useState,
+    MouseEvent, ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
-import classNames from 'shared/lib/classNames/classNames';
+import classNames, { TMods } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
 import cls from './Modal.module.scss';
 
@@ -13,15 +13,14 @@ interface ModalProps {
 
 const ANIMATION_DELAY = 300;
 
-export const Modal: FC<ModalProps> = (props: ModalProps) => {
+export const Modal = (props: ModalProps) => {
     const { isOpen, onClose, children } = props;
     const [isClosing, setIsClosing] = useState<boolean>(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
-    const mods: Record<string, boolean> = {
+    const mods: TMods = {
         [cls.visible]: isOpen,
         [cls.close]: isClosing,
     };
-    const [mounted, setMounted] = useState<boolean>(false);
 
     const onCloseHandler = useCallback(() => {
         setIsClosing(true);
@@ -44,18 +43,18 @@ export const Modal: FC<ModalProps> = (props: ModalProps) => {
     useEffect(() => {
         if (isOpen) {
             window.addEventListener('keydown', onEscapeDown);
-            setMounted(true);
         }
 
         return () => {
-            clearTimeout(timerRef.current);
+            if (timerRef.current) {
+                clearTimeout(timerRef.current);
+            }
             window.removeEventListener('keydown', onEscapeDown);
-            setMounted(false);
         };
     }, [isOpen, onEscapeDown]);
 
     return (
-        mounted && (
+        (
             <Portal elementNode={document.body}>
                 <div className={classNames(cls.Modal, mods)}>
                     <div className={cls.overlay} onClick={onCloseHandler}>

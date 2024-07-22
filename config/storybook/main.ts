@@ -40,6 +40,7 @@ const config = {
 
         config.plugins.push(new webpack.DefinePlugin({
             __IS_DEV__: true,
+            __API__: true,
         }));
 
         config.module.rules.push(buildCssLoader(true));

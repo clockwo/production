@@ -4,16 +4,16 @@ import cls from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
 
+export enum InputStatus {
+    ERROR = 'error'
+}
+
 interface InputProps extends HTMLInputProps {
     onChange?: (value: string) => void;
     value?: string,
     placeHolderText?: string,
     status?: InputStatus,
     errorMessage?: string
-}
-
-export enum InputStatus {
-    ERROR = 'error'
 }
 
 export const Input = memo((props: InputProps) => {
@@ -27,14 +27,14 @@ export const Input = memo((props: InputProps) => {
     } = props;
 
     const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-        onChange(event.target.value);
+        onChange?.(event.target.value);
     };
 
     return (
         <div className={cls.wrapper}>
             <input
                 type="text"
-                className={classNames(cls.Input, {}, [cls[status]])}
+                className={classNames(cls.Input, {}, [cls[status ?? '']])}
                 {...otherProps}
                 placeholder={placeHolderText}
                 value={value}

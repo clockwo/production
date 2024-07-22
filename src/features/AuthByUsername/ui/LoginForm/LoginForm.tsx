@@ -30,8 +30,8 @@ const LoginForm = memo(() => {
     const isLoading = useSelector(getLoginLoading);
     const { theme } = useTheme();
 
-    const [usernameErrorMessage, setUsernameErrorMessage] = useState<string | null>(null);
-    const [passwordErrorMessage, setPasswordErrorMessage] = useState<string | null>(null);
+    const [usernameErrorMessage, setUsernameErrorMessage] = useState<string | undefined>(undefined);
+    const [passwordErrorMessage, setPasswordErrorMessage] = useState<string | undefined>(undefined);
 
     useDynamicModuleLoad(initialReducers, true);
 
@@ -45,8 +45,8 @@ const LoginForm = memo(() => {
 
     const onLoginSubmit = useCallback(() => {
         let isValid = true;
-        setUsernameErrorMessage(null);
-        setPasswordErrorMessage(null);
+        setUsernameErrorMessage(undefined);
+        setPasswordErrorMessage(undefined);
         const userStatus = validateUsername(username);
         const passwordStatus = validatePassword(password);
 

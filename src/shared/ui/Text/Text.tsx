@@ -1,4 +1,4 @@
-import classNames from 'shared/lib/classNames/classNames';
+import classNames, { TMods } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import cls from './Text.module.scss';
 
@@ -26,7 +26,7 @@ export const Text = memo((props: TextProps) => {
         text,
     } = props;
 
-    const mods: Record<string, boolean> = {
+    const mods: TMods = {
         [cls[variation]]: true,
         [cls[color]]: true,
     };
