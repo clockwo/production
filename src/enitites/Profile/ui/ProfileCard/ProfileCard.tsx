@@ -12,16 +12,19 @@ interface ProfileCardProps {
     className?: string,
     data?: IProfile,
     isLoading: boolean,
+    isReadonly: boolean
 }
 
 export const ProfileCard: FC<ProfileCardProps> = (props: ProfileCardProps) => {
     const { t } = useTranslation();
-    const { className, data, isLoading } = props;
+    const {
+        className, data, isLoading, isReadonly,
+    } = props;
 
     if (isLoading) {
         return (
             <div className={classNames(cls.ProfileCard, {
-                [cls.loading]: isLoading,
+                [cls.loading]: true,
             }, [className])}
             >
                 <SpinnerLoader />

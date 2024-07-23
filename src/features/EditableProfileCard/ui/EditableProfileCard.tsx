@@ -10,6 +10,7 @@ import { getProfileLoading } from '../model/selectors/getProfileLoading/getProfi
 import { getProfileError } from '../model/selectors/getProfileError/getProfileError';
 import cls from './EditableProfileCard.module.scss';
 import { profileReducer } from '../model/slice/profileSlice';
+import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly';
 
 interface EditableProfileCardProps {
     className?: string;
@@ -30,11 +31,12 @@ export const EditableProfileCard = (props: EditableProfileCardProps) => {
 
     const data = useSelector(getProfileData);
     const isLoading = useSelector(getProfileLoading);
+    const isReadonly = useSelector(getProfileReadonly);
     const error = useSelector(getProfileError);
 
     return (
         <div className={classNames(cls.EditableProfileCard, {}, [className])}>
-            <ProfileCard data={data} isLoading={isLoading} />
+            <ProfileCard data={data} isLoading={isLoading} isReadonly={isReadonly} />
         </div>
     );
 };

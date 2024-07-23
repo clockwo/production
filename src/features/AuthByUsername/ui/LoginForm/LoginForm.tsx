@@ -1,13 +1,14 @@
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { Input } from 'shared/ui/Input/Input';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { memo, useCallback, useState } from 'react';
 import { ReducerList, useDynamicModuleLoad } from 'shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { validatePassword } from 'features/AuthByUsername/model/libs/validatePassword/validatePassword';
 import { Text, TextColor, TextVariation } from 'shared/ui/Text/Text';
 import { DotsLoader } from 'shared/ui/DotsLoader/DotsLoader';
 import { useTheme } from 'app/providers/ThemeProvider';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { validateUsername } from '../../model/libs/validateUsername/validateUsername';
 import { loginActions, loginReducer } from '../../model/slice/loginSlice';
@@ -21,9 +22,13 @@ const initialReducers: ReducerList = {
     login: loginReducer,
 };
 
-const LoginForm = memo(() => {
+interface LoginFormProps {
+    setClose: () => void
+}
+
+const LoginForm = memo(({ setClose }: LoginFormProps) => {
     const { t } = useTranslation();
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const username = useSelector(getLoginUsername);
     const password = useSelector(getLoginPassword);
     const error = useSelector(getLoginError);
@@ -43,7 +48,7 @@ const LoginForm = memo(() => {
         dispatch(loginActions.setPassword(value));
     }, [dispatch]);
 
-    const onLoginSubmit = useCallback(() => {
+    const onLoginSubmit = useCallback(async () => {
         let isValid = true;
         setUsernameErrorMessage(undefined);
         setPasswordErrorMessage(undefined);
@@ -61,8 +66,10 @@ const LoginForm = memo(() => {
 
         if (!isValid) return;
 
-        const result = dispatch(loginByUsername({ username, password }));
-        console.log(result);
+        const result = await dispatch(loginByUsername({ username, password }));
+        if (result.meta.requestStatus === 'fulfilled') {
+            setClose();
+        }
     }, [dispatch, username, password]);
 
     return (
