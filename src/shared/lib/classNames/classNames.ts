@@ -3,7 +3,7 @@ export type TMods = Record<string, boolean | string | undefined>;
 const classNames = (
     cls: string,
     mods: TMods = {},
-    additional: string[] = [],
+    additional: Array<string | undefined> = [],
 ): string => [
     cls,
     ...additional,

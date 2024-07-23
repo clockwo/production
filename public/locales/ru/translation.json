@@ -17,5 +17,6 @@
     "The password must has special symbol": "Пароль должен содержать специальный символ",
     "The password must be greater than 3 characters": "Пароль должен быть длиннее 3 символов",
     "The password cannot be empty": "Пароль не может быть пустым",
-    "Profile": "Профиль"
+    "Profile": "Профиль",
+    "Edit": "Редактировать"
 }

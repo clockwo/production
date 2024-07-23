@@ -61,7 +61,8 @@ const LoginForm = memo(() => {
 
         if (!isValid) return;
 
-        dispatch(loginByUsername({ username, password }));
+        const result = dispatch(loginByUsername({ username, password }));
+        console.log(result);
     }, [dispatch, username, password]);
 
     return (
