@@ -18,5 +18,11 @@
     "The password must be greater than 3 characters": "Пароль должен быть длиннее 3 символов",
     "The password cannot be empty": "Пароль не может быть пустым",
     "Profile": "Профиль",
-    "Edit": "Редактировать"
+    "Edit": "Редактировать",
+    "An error occurred while loading a profile": "Произошла ошибка при загрузке профиля",
+    "Try reloading the page": "Попробуйте перезагрузить страницу",
+    "Cancel": "Отменить",
+    "Save": "Сохранить",
+    "Firstname": "Имя",
+    "Lastname": "Фамилия"
 }

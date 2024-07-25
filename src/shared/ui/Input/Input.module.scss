@@ -15,6 +15,16 @@
   }
 }
 
+.disabled {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.label {
+  font: var(--font-m);
+  font-weight: 500;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;

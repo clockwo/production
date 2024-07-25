@@ -14,6 +14,8 @@ interface InputProps extends HTMLInputProps {
     placeHolderText?: string,
     status?: InputStatus,
     errorMessage?: string
+    label?: string
+    readonly?: boolean
 }
 
 export const Input = memo((props: InputProps) => {
@@ -23,6 +25,8 @@ export const Input = memo((props: InputProps) => {
         placeHolderText,
         status,
         errorMessage,
+        label,
+        readonly = false,
         ...otherProps
     } = props;
 
@@ -32,13 +36,15 @@ export const Input = memo((props: InputProps) => {
 
     return (
         <div className={cls.wrapper}>
+            {label && <p className={cls.label}>{label}</p>}
             <input
                 type="text"
-                className={classNames(cls.Input, {}, [cls[status ?? '']])}
-                {...otherProps}
+                className={classNames(cls.Input, { [cls.disabled]: readonly }, [cls.status])}
                 placeholder={placeHolderText}
                 value={value}
                 onChange={onInputChange}
+                readOnly={readonly}
+                {...otherProps}
             />
             {errorMessage && <span className={cls.errorMessage}>{errorMessage}</span>}
         </div>

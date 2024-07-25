@@ -18,5 +18,11 @@
     "The password must be greater than 3 characters": "The password must be greater than 3 characters",
     "The password cannot be empty": "The password cannot be empty",
     "Profile": "Profile",
-    "Edit": "Edit"
+    "Edit": "Edit",
+    "An error occurred while loading a profile": "An error occurred while loading a profile",
+    "Try reloading the page": "Try reloading the page",
+    "Cancel": "Cancel",
+    "Save": "Save",
+    "Firstname": "Firstname",
+    "Lastname": "Lastname"
 }
