@@ -10,7 +10,7 @@ export enum InputStatus {
 
 interface InputProps extends HTMLInputProps {
     onChange?: (value: string) => void;
-    value?: string,
+    value?: string | number,
     placeHolderText?: string,
     status?: InputStatus,
     errorMessage?: string

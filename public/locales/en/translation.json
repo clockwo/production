@@ -24,5 +24,10 @@
     "Cancel": "Cancel",
     "Save": "Save",
     "Firstname": "Firstname",
-    "Lastname": "Lastname"
+    "Lastname": "Lastname",
+    "City": "City",
+    "Age": "Age",
+    "Avatar": "User avatar (link)",
+    "Set currency": "Set currency",
+    "Set country": "Set country"
 }

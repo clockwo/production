@@ -1,38 +1,38 @@
 {
-    "posts": [
-        {
-            "id": "1",
-            "title": "json-server",
-            "userId": 1
-        },
-        {
-            "id": "2",
-            "title": "json-server",
-            "userId": 2
-        }
-    ],
-    "comments": [
-        {
-            "id": "1",
-            "body": "some comment",
-            "postId": 1
-        }
-    ],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "1234!"
-        }
-    ],
-    "profile": {
-        "first": "Максим",
-        "lastname": "Фрилансер",
-        "age": 23,
-        "currency": "RUB",
-        "country": "Russia",
-        "city": "Санкт-Петербург",
-        "username": "admin",
-        "avatar": "https://pm1.aminoapps.com/6071/97717507b8ffd239d3435ce6412894ad29165a04_hq.jpg"
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "userId": 1
+    },
+    {
+      "id": "2",
+      "title": "json-server",
+      "userId": 2
     }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "1234!"
+    }
+  ],
+  "profile": {
+    "first": "Максим",
+    "lastname": "Фрилансер",
+    "age": 23,
+    "currency": "USD",
+    "country": "USA",
+    "city": "Санкт-Петербург",
+    "username": "admin",
+    "avatar": "https://steamuserimages-a.akamaihd.net/ugc/1737800827738019136/8DA9C7297C61E5A06CCD514B94E42B18E167E09E/"
+  }
 }

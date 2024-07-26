@@ -24,5 +24,10 @@
     "Cancel": "Отменить",
     "Save": "Сохранить",
     "Firstname": "Имя",
-    "Lastname": "Фамилия"
+    "Lastname": "Фамилия",
+    "City": "City",
+    "Age": "Age",
+    "Avatar": "Аватар пользователя (ссылка)",
+    "Set currency": "Укажите валюту",
+    "Set country": "Укажите страну"
 }
