@@ -29,5 +29,30 @@
     "Age": "Age",
     "Avatar": "User avatar (link)",
     "Set currency": "Set currency",
-    "Set country": "Set country"
+    "Set country": "Set country",
+    "The age provided is incorrect": {
+        " Please enter a valid age": {
+            "": "The age provided is incorrect. Please enter a valid age."
+        }
+    },
+    "The user data provided is incorrect": {
+        " Please check and re-enter the information": {
+            "": "The user data provided is incorrect. Please check and re-enter the information."
+        }
+    },
+    "The city provided is incorrect": {
+        " Please enter a valid city name": {
+            "": "The city provided is incorrect. Please enter a valid city name."
+        }
+    },
+    "A server error occurred": {
+        " Please try again later": {
+            "": "A server error occurred. Please try again later."
+        }
+    },
+    "No data available": {
+        " Please provide the necessary information": {
+            "": "No data available. Please provide the necessary information."
+        }
+    }
 }

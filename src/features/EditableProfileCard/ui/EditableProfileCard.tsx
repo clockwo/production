@@ -7,6 +7,8 @@ import { useSelector } from 'react-redux';
 import { EditableProfileHeader } from 'features/EditableProfileCard/ui/EditableProfileHeader/EditableProfileHeader';
 import { Currency } from 'enitites/Currency';
 import { Country } from 'enitites/Country';
+import { Text, TextColor } from 'shared/ui/Text/Text';
+import { useTranslation } from 'react-i18next';
 import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly';
 import { fetchProfileData } from '../model/services/fetchProfileData/fetchProfileData';
 import { getProfileLoading } from '../model/selectors/getProfileLoading/getProfileLoading';
@@ -14,6 +16,8 @@ import { getProfileError } from '../model/selectors/getProfileError/getProfileEr
 import cls from './EditableProfileCard.module.scss';
 import { profileActions, profileReducer } from '../model/slice/profileSlice';
 import { getProfileForm } from '../model/selectors/getProfileForm/getProfileForm';
+import { getProfileValidateErrors } from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+import { IValidateProfileError } from '../model/types/types';
 
 interface EditableProfileCardProps {
     className?: string;
@@ -26,16 +30,27 @@ const initialReducers: ReducerList = {
 export const EditableProfileCard = (props: EditableProfileCardProps) => {
     const { className } = props;
     const dispatch = useAppDispatch();
+    const { t } = useTranslation();
     useDynamicModuleLoad(initialReducers, true);
 
     useEffect(() => {
         dispatch(fetchProfileData());
     }, [dispatch]);
 
+    const validateErrorTranslates = {
+        [IValidateProfileError.INCORRECT_AGE]: t('The age provided is incorrect. Please enter a valid age.'),
+        [IValidateProfileError.INCORRECT_USER_DATA]:
+            t('The user data provided is incorrect. Please check and re-enter the information.'),
+        [IValidateProfileError.INCORRECT_CITY]: t('The city provided is incorrect. Please enter a valid city name.'),
+        [IValidateProfileError.SERVER_ERROR]: t('A server error occurred. Please try again later.'),
+        [IValidateProfileError.NO_DATA]: t('No data available. Please provide the necessary information.'),
+    };
+
     const isReadonly = useSelector(getProfileReadonly) ?? true;
     const data = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileLoading);
     const error = useSelector(getProfileError);
+    const validateErrors = useSelector(getProfileValidateErrors);
 
     const onChangeFirstname = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ first: value || '' }));
@@ -70,6 +85,17 @@ export const EditableProfileCard = (props: EditableProfileCardProps) => {
     return (
         <div className={classNames(cls.EditableProfileCard, {}, [className])}>
             <EditableProfileHeader />
+            {
+                validateErrors?.length && (
+                    validateErrors.map((validateError) => (
+                        <Text
+                            key={validateError}
+                            text={validateErrorTranslates[validateError]}
+                            color={TextColor.RED}
+                        />
+                    ))
+                )
+            }
             <ProfileCard
                 data={data}
                 isLoading={isLoading}

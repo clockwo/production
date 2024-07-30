@@ -29,5 +29,30 @@
     "Age": "Age",
     "Avatar": "Аватар пользователя (ссылка)",
     "Set currency": "Укажите валюту",
-    "Set country": "Укажите страну"
+    "Set country": "Укажите страну",
+    "The age provided is incorrect": {
+        " Please enter a valid age": {
+            "": "Указан некорректный возраст. Пожалуйста, введите действительный возраст."
+        }
+    },
+    "The user data provided is incorrect": {
+        " Please check and re-enter the information": {
+            "": "Указаны некорректные данные пользователя. Пожалуйста, проверьте и введите информацию заново."
+        }
+    },
+    "The city provided is incorrect": {
+        " Please enter a valid city name": {
+            "": "Указан некорректный город. Пожалуйста, введите действительное название города."
+        }
+    },
+    "A server error occurred": {
+        " Please try again later": {
+            "": "Произошла ошибка сервера. Пожалуйста, попробуйте позже."
+        }
+    },
+    "No data available": {
+        " Please provide the necessary information": {
+            "": "Нет данных. Пожалуйста, предоставьте необходимую информацию."
+        }
+    }
 }
