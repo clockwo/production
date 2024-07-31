@@ -33,6 +33,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
                         text={item.text}
                         path={item.path}
                         Icon={item.Icon}
+                        authOnly={item.authOnly}
                     />
                 ))}
 

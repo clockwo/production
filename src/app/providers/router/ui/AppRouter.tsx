@@ -1,10 +1,32 @@
-import { Suspense } from 'react';
+import { memo, Suspense, useCallback } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { routeConfig } from 'shared/config/routeConfig/routeConfig';
+import { AppRouteProps, routeConfig } from 'shared/config/routeConfig/routeConfig';
 import { PageLoader } from 'widgets/PageLoader';
 import { SpinnerLoader } from 'shared/ui/SpinnerLoader/SpinnerLoader';
+import { RequireAuth } from 'app/providers/router/ui/RequireAuth';
 
 function AppRouter() {
+    const renderWithWrapper = useCallback((route: AppRouteProps) => {
+        const element = (
+            <div className="flex-wrapper">
+                {route.element}
+            </div>
+        );
+        return (
+            <Route
+                key={route.path}
+                path={route.path}
+                element={
+                    route.authOnly ? (
+                        <RequireAuth>
+                            {element}
+                        </RequireAuth>
+                    ) : route.element
+                }
+            />
+        );
+    }, []);
+
     return (
         <Suspense fallback={(
             <div className="flex-wrapper">
@@ -15,16 +37,10 @@ function AppRouter() {
         )}
         >
             <Routes>
-                {Object.values(routeConfig).map(({ element, path }) => (
-                    <Route
-                        key={path}
-                        path={path}
-                        element={<div className="flex-wrapper">{element}</div>}
-                    />
-                ))}
+                {Object.values(routeConfig).map(renderWithWrapper)}
             </Routes>
         </Suspense>
     );
 }
 
-export default AppRouter;
+export default memo(AppRouter);
