@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LoginFormAsync as LoginForm } from '../LoginForm/LoginForm.async';
 
 export const LoginModal = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('login');
     const { isOpen, setOpen, setClose } = useModal();
     const dispatch = useDispatch();
     const userAuth = useSelector(getUserAuth);

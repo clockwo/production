@@ -27,7 +27,7 @@ interface LoginFormProps {
 }
 
 const LoginForm = memo(({ setClose }: LoginFormProps) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('login');
     const dispatch = useAppDispatch();
     const username = useSelector(getLoginUsername);
     const password = useSelector(getLoginPassword);
