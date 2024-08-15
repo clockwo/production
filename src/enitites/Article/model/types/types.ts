@@ -15,18 +15,18 @@ interface IBaseBlock {
     type: ArticleBlockType;
 }
 
-interface ICodeBlock extends IBaseBlock {
+export interface ICodeBlock extends IBaseBlock {
     type: ArticleBlockType.CODE;
     code: string;
 }
 
-interface ITextBlock extends IBaseBlock {
+export interface ITextBlock extends IBaseBlock {
     type: ArticleBlockType.TEXT;
     title?: string;
     paragraphs: string[];
 }
 
-interface IImageBlock extends IBaseBlock {
+export interface IImageBlock extends IBaseBlock {
     type: ArticleBlockType.IMAGE;
     title?: string;
     src: string;

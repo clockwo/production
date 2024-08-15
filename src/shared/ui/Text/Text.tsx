@@ -19,12 +19,18 @@ export enum TextAlign {
     RIGHT = 'right',
 }
 
+export enum TextSize {
+    M = 'size_m',
+    L = 'size_l'
+}
+
 interface TextProps {
     variation?: TextVariation
     color?: TextColor
-    text: string
+    text?: string
     title?: string
     align?: TextAlign
+    size?: TextSize
 }
 
 export const Text = memo((props: TextProps) => {
@@ -34,12 +40,14 @@ export const Text = memo((props: TextProps) => {
         text,
         title,
         align = TextAlign.LEFT,
+        size = TextSize.M,
     } = props;
 
     const mods: TMods = {
         [cls[variation]]: true,
         [cls[color]]: true,
         [cls[align]]: true,
+        [cls[size]]: true,
     };
 
     return (

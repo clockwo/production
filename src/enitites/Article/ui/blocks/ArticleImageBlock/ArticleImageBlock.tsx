@@ -1,16 +1,13 @@
-import classNames from 'shared/lib/classNames/classNames';
+import { IImageBlock } from 'enitites/Article/model/types/types';
 import styles from './ArticleImageBlock.module.scss';
 
-interface ArticleImageBlockProps {
-    className?: string;
-}
-
-export const ArticleImageBlock = (props: ArticleImageBlockProps) => {
-    const { className } = props;
+export const ArticleImageBlock = (props: Partial<IImageBlock>) => {
+    const { src, title } = props;
 
     return (
-        <div className={classNames(styles.ArticleImageBlock, {}, [className])}>
-            123
-        </div>
+        <figure className={styles.ArticleImageBlock}>
+            <img src={src} alt="" />
+            {title && <figcaption>{title}</figcaption>}
+        </figure>
     );
 };

@@ -1,7 +1,7 @@
 .light {
   --background-color: rgb(255, 255, 255);
   --inverted-background: #121212;
-
+  --trasperent-background: rgba(0, 0, 0, 0.2);
 
   --primary-color: rgba(0, 0, 0, 0.87);
   --inverted-primary-color: #fff;
@@ -10,4 +10,7 @@
   --inverted-secondary-color: rgba(255, 255, 255, 0.7);
 
   --red-color: rgb(255, 0, 0);
+
+  //  Skeleton
+  --skeleton-color: #e2e5e7
 }
