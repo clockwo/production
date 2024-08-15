@@ -1,8 +1,9 @@
 import { Text } from 'shared/ui/Text/Text';
+import { memo } from 'react';
 import styles from './ArticleTextBlock.module.scss';
 import { ITextBlock } from '../../../model/types/types';
 
-export const ArticleTextBlock = (props: Partial<ITextBlock>) => {
+export const ArticleTextBlock = memo((props: Partial<ITextBlock>) => {
     const { title, paragraphs } = props;
 
     return (
@@ -11,4 +12,4 @@ export const ArticleTextBlock = (props: Partial<ITextBlock>) => {
             {paragraphs?.map((paragraph) => <Text key={paragraph} text={paragraph} />)}
         </div>
     );
-};
+});

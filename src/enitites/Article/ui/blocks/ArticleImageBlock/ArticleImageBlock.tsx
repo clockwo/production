@@ -1,7 +1,8 @@
 import { IImageBlock } from 'enitites/Article/model/types/types';
+import { memo } from 'react';
 import styles from './ArticleImageBlock.module.scss';
 
-export const ArticleImageBlock = (props: Partial<IImageBlock>) => {
+export const ArticleImageBlock = memo((props: Partial<IImageBlock>) => {
     const { src, title } = props;
 
     return (
@@ -10,4 +11,4 @@ export const ArticleImageBlock = (props: Partial<IImageBlock>) => {
             {title && <figcaption>{title}</figcaption>}
         </figure>
     );
-};
+});

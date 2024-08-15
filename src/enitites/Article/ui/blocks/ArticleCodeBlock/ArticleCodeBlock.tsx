@@ -2,13 +2,14 @@ import classNames from 'shared/lib/classNames/classNames';
 import { ICodeBlock } from 'enitites/Article/model/types/types';
 import { Button } from 'shared/ui/Button/Button';
 import CopyIcon from 'shared/assets/svg/copy.svg';
+import { memo } from 'react';
 import styles from './ArticleCodeBlock.module.scss';
 
 interface ArticleCodeBlockProps extends Partial<ICodeBlock> {
     className?: string;
 }
 
-export const ArticleCodeBlock = (props: ArticleCodeBlockProps) => {
+export const ArticleCodeBlock = memo((props: ArticleCodeBlockProps) => {
     const { className, code } = props;
 
     const onClick = async () => {
@@ -29,4 +30,4 @@ export const ArticleCodeBlock = (props: ArticleCodeBlockProps) => {
             </pre>
         </div>
     );
-};
+});

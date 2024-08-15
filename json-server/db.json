@@ -93,28 +93,25 @@
         },
         {
             "id": "2",
-            "text": "some comment 2",
+            "text": "That's wonderful!",
             "articleId": "1",
-            "userId": "1"
-        },
-        {
-            "id": "3",
-            "text": "some comment 3",
-            "articleId": "1",
-            "userId": "1"
+            "userId": "2"
         }
     ],
     "users": [
         {
             "id": "1",
             "username": "admin",
-            "password": "1234!"
+            "password": "1234!",
+            "role": "ADMIN",
+            "avatar": "https://play-lh.googleusercontent.com/Qen7AErcMTWKrlhPpQrMS6teGFffDDc3NHMlf7LbecC_Tlxp6OdaEUMLPJDnd1bT9w=w526-h296-rw"
         },
         {
             "id": "2",
             "username": "simple",
             "password": "1234!",
-            "role": "USER"
+            "role": "USER",
+            "avatar": "https://wallpapers.com/images/hd/anime-profile-picture-jioug7q8n43yhlwn.jpg"
         }
     ],
     "profile": {
@@ -125,6 +122,6 @@
         "country": "USA",
         "city": "Санкт-Петербург",
         "username": "admin",
-        "avatar": "https://steamuserimages-a.akamaihd.net/ugc/1737800827738019136/8DA9C7297C61E5A06CCD514B94E42B18E167E09E/"
+        "avatar": "https://play-lh.googleusercontent.com/Qen7AErcMTWKrlhPpQrMS6teGFffDDc3NHMlf7LbecC_Tlxp6OdaEUMLPJDnd1bT9w=w526-h296-rw"
     }
 }
