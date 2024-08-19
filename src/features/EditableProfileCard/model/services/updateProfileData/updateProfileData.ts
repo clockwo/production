@@ -6,9 +6,9 @@ import { IValidateProfileError } from '../../types/types';
 import { getProfileForm } from '../../selectors/getProfileForm/getProfileForm';
 import { validateProfileErrors } from '../validateProfileErrors/validateProfileErrors';
 
-export const updateProfileData = createAsyncThunk<IProfile, void, ThunkConfig<IValidateProfileError[]>>(
+export const updateProfileData = createAsyncThunk<IProfile, string, ThunkConfig<IValidateProfileError[]>>(
     'profile/updateProfileData',
-    async (_, { extra, rejectWithValue, getState }) => {
+    async (id, { extra, rejectWithValue, getState }) => {
         const formData = getProfileForm(getState());
 
         const errors = validateProfileErrors(formData);
@@ -18,7 +18,7 @@ export const updateProfileData = createAsyncThunk<IProfile, void, ThunkConfig<IV
         }
 
         try {
-            const response = await extra.api.put<IProfile>('/profile', formData);
+            const response = await extra.api.put<IProfile>(`/profile/${id}`, formData);
 
             if (!response.data) {
                 return rejectWithValue(i18n.t('Something went wrong'));

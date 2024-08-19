@@ -7,15 +7,16 @@ import { IComment } from '../../model/types/comment';
 interface CommentListProps {
     className?: string;
     comments: IComment[];
+    isLoading?: boolean;
 }
 
 export const CommentList = memo((props: CommentListProps) => {
-    const { className, comments } = props;
+    const { className, comments, isLoading } = props;
 
     return (
         <div className={classNames(styles.CommentList, {}, [className])}>
             {comments.map((comment) => (
-                <Comment comment={comment} key={comment.id} />
+                <Comment isLoading={isLoading} comment={comment} key={comment.id} />
             ))}
         </div>
     );

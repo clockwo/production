@@ -32,7 +32,9 @@ export const EditableProfileHeader = () => {
 
     const onSaveClick = () => {
         if (JSON.stringify(form) !== JSON.stringify(data)) {
-            dispatch(updateProfileData());
+            if (data?.id) {
+                dispatch(updateProfileData(data.id));
+            }
         } else {
             dispatch(profileActions.cancelEdit());
         }

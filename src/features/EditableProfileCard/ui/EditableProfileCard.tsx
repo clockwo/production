@@ -9,6 +9,7 @@ import { Currency } from 'enitites/Currency';
 import { Country } from 'enitites/Country';
 import { Text, TextColor } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly';
 import { fetchProfileData } from '../model/services/fetchProfileData/fetchProfileData';
 import { getProfileLoading } from '../model/selectors/getProfileLoading/getProfileLoading';
@@ -18,6 +19,7 @@ import { profileActions, profileReducer } from '../model/slice/profileSlice';
 import { getProfileForm } from '../model/selectors/getProfileForm/getProfileForm';
 import { getProfileValidateErrors } from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 import { IValidateProfileError } from '../model/types/types';
+import { canEditProfile } from '../model/selectors/canEditProfile/canEditProfile';
 
 interface EditableProfileCardProps {
     className?: string;
@@ -32,10 +34,15 @@ export const EditableProfileCard = (props: EditableProfileCardProps) => {
     const dispatch = useAppDispatch();
     const { t } = useTranslation();
     useDynamicModuleLoad(initialReducers, true);
+    const { id } = useParams();
 
+    const isEditor = useSelector(canEditProfile);
+    console.log(isEditor);
     useEffect(() => {
-        dispatch(fetchProfileData());
-    }, [dispatch]);
+        if (id) {
+            dispatch(fetchProfileData(id));
+        }
+    }, [dispatch, id]);
 
     const validateErrorTranslates = {
         [IValidateProfileError.INCORRECT_AGE]: t('The age provided is incorrect. Please enter a valid age.'),
@@ -84,7 +91,7 @@ export const EditableProfileCard = (props: EditableProfileCardProps) => {
 
     return (
         <div className={classNames(cls.EditableProfileCard, {}, [className])}>
-            <EditableProfileHeader />
+            {isEditor && <EditableProfileHeader />}
             {
                 validateErrors?.length && (
                     validateErrors.map((validateError) => (

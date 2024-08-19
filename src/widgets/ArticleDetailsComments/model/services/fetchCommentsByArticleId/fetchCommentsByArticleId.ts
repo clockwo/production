@@ -5,11 +5,11 @@ import { IComment } from 'enitites/Comment';
 
 export const fetchCommentsByArticleId = createAsyncThunk<IComment[], string, ThunkConfig<string>>(
     'articleDetailsComments/fetchCommentsByArticleId',
-    async (id, { extra, rejectWithValue }) => {
+    async (articleId, { extra, rejectWithValue }) => {
         try {
             const response = await extra.api.get<IComment[]>('/comments', {
                 params: {
-                    id,
+                    articleId,
                     _expand: 'user',
                 },
             });

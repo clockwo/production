@@ -16,12 +16,13 @@ export const ArticleDetailsBlocks = memo((props: ArticleDetailsBlocksProps) => {
     const getBlock = useCallback((block: ArticleBlock) => {
         switch (block.type) {
         case ArticleBlockType.CODE:
-            return <ArticleCodeBlock code={block.code} />;
+            return <ArticleCodeBlock key={block.id} code={block.code} />;
         case ArticleBlockType.IMAGE:
-            return <ArticleImageBlock src={block.src} title={block.title} />;
+            return <ArticleImageBlock key={block.id} src={block.src} title={block.title} />;
         case ArticleBlockType.TEXT:
             return (
                 <ArticleTextBlock
+                    key={block.id}
                     paragraphs={block.paragraphs}
                     title={block.title}
                 />
