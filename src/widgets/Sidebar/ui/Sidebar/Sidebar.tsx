@@ -4,9 +4,10 @@ import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
 
-import { SidebarItemsList } from 'widgets/Sidebar/model/items';
-import { SidebarItem } from 'widgets/Sidebar/ui/SidebarItem/SidebarItem';
+import { useSelector } from 'react-redux';
+import { SidebarItem } from '../../ui/SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
+import { getSidebarItems } from '../../model/selectors/getSidebarItems';
 
 interface SidebarProps {
     className?: string;
@@ -18,6 +19,8 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
         setCollapsed((prev) => !prev);
     };
 
+    const sidebarItemsList = useSelector(getSidebarItems);
+
     return (
         <div
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
@@ -26,7 +29,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             data-testid="sidebar"
         >
             <div className={cls.links}>
-                {SidebarItemsList.map((item) => (
+                {sidebarItemsList.map((item) => (
                     <SidebarItem
                         key={item.path}
                         collapsed={collapsed}
