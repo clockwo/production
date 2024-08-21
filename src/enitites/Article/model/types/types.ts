@@ -10,7 +10,12 @@ export enum ArticleType {
     ECONOMICS = 'ECONOMICS'
 }
 
-interface IBaseBlock {
+export enum ArticleView {
+    BIG = 'big',
+    SMALL = 'small',
+}
+
+export interface IBaseBlock {
     id: string;
     type: ArticleBlockType;
 }

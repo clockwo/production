@@ -25,12 +25,13 @@ export enum TextSize {
 }
 
 interface TextProps {
-    variation?: TextVariation
-    color?: TextColor
-    text?: string
-    title?: string
-    align?: TextAlign
-    size?: TextSize
+    variation?: TextVariation;
+    color?: TextColor;
+    text?: string;
+    title?: string;
+    align?: TextAlign;
+    size?: TextSize;
+    className?: string;
 }
 
 export const Text = memo((props: TextProps) => {
@@ -41,6 +42,7 @@ export const Text = memo((props: TextProps) => {
         title,
         align = TextAlign.LEFT,
         size = TextSize.M,
+        className,
     } = props;
 
     const mods: TMods = {
@@ -53,7 +55,7 @@ export const Text = memo((props: TextProps) => {
     return (
         <div className={classNames(cls.Text, mods)}>
             {title && <p className={cls.title}>{title}</p>}
-            {text && <p className={cls.text}>{text}</p>}
+            {text && <p className={classNames(cls.text, {}, [className])}>{text}</p>}
         </div>
     );
 });

@@ -1,0 +1,11 @@
+.ArticleList {
+  display: grid;
+
+}
+
+.small {
+  grid-template-columns: repeat(auto-fit, 198px);
+  grid-auto-flow: dense;
+  grid-auto-rows: 200px auto;
+  gap: 1rem;
+}
