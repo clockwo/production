@@ -14,6 +14,11 @@ const mook = {
     views: 1500,
     createdAt: '26.02.2022',
     type: ['IT', 'Programming'],
+    user: {
+        id: '1',
+        username: 'Maksim Freelancer',
+        avatar: 'https://play-lh.googleusercontent.com/Qen7AErcMTWKrlhPpQrMS6teGFffDDc3NHMlf7LbecC_Tlxp6OdaEUMLPJDnd1bT9w=w526-h296-rw',
+    },
     blocks: [
         {
             id: '1',

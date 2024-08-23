@@ -9,6 +9,56 @@
   }
 }
 
+.viewers {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+
+.big {
+  border-radius: 5px;
+
+  .header {
+    padding: 14px 20px;
+  }
+
+  .headerInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bottomInfo {
+    padding: 14px 20px;
+  }
+
+  .bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .textBlock {
+    height: 170px;
+    overflow-y: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .user {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .image {
+    width: 100%;
+    height: 178px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 .small {
   grid-template-rows: subgrid;
   grid-row: span 2;
@@ -59,11 +109,6 @@
     justify-content: space-between;
   }
 
-  .viewers {
-    display: flex;
-    gap: 3px;
-    align-items: center;
-  }
 
   .image {
     object-fit: fill;
