@@ -16,7 +16,6 @@ interface ArticleListItemProps {
     className?: string;
     article: IArticle;
     view: ArticleView;
-    isLoading: boolean;
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {

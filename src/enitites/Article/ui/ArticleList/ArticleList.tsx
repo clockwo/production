@@ -46,7 +46,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     key={article.id}
                     article={article}
                     view={view}
-                    isLoading={isLoading}
                 />
             ))}
         </div>
