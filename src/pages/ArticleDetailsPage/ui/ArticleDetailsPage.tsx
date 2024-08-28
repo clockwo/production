@@ -6,6 +6,7 @@ import { ArticleDetailsComments } from 'widgets/ArticleDetailsComments';
 import { useCallback } from 'react';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
+import { Page } from 'shared/ui/Page/Page';
 
 const ArticleDetailsPage = () => {
     const { id } = useParams();
@@ -17,16 +18,18 @@ const ArticleDetailsPage = () => {
 
     if (!id) {
         return (
-            <Text text={t("This article doesn't exists")} />
+            <Page>
+                <Text text={t("This article doesn't exists")} />
+            </Page>
         );
     }
 
     return (
-        <>
+        <Page>
             <Button onClick={onBackToList} theme={ButtonTheme.OUTLINE}>Вернуться к постам</Button>
             <ArticleDetails id={id} />
             <ArticleDetailsComments articleId={id} />
-        </>
+        </Page>
     );
 };
 

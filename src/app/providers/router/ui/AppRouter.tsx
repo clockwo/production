@@ -8,9 +8,15 @@ import { RequireAuth } from 'app/providers/router/ui/RequireAuth';
 function AppRouter() {
     const renderWithWrapper = useCallback((route: AppRouteProps) => {
         const element = (
-            <div className="flex-wrapper">
+            <Suspense fallback={(
+                <PageLoader>
+                    <SpinnerLoader />
+                </PageLoader>
+            )}
+            >
                 {route.element}
-            </div>
+            </Suspense>
+
         );
         return (
             <Route
@@ -21,25 +27,16 @@ function AppRouter() {
                         <RequireAuth>
                             {element}
                         </RequireAuth>
-                    ) : route.element
+                    ) : element
                 }
             />
         );
     }, []);
 
     return (
-        <Suspense fallback={(
-            <div className="flex-wrapper">
-                <PageLoader>
-                    <SpinnerLoader />
-                </PageLoader>
-            </div>
-        )}
-        >
-            <Routes>
-                {Object.values(routeConfig).map(renderWithWrapper)}
-            </Routes>
-        </Suspense>
+        <Routes>
+            {Object.values(routeConfig).map(renderWithWrapper)}
+        </Routes>
     );
 }
 

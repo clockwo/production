@@ -5,6 +5,8 @@ import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { useCallback, useEffect } from 'react';
 import { fetchArticlesList } from 'pages/Articles/model/services/fetchArticlesList';
+import { Page } from 'shared/ui/Page/Page';
+import { fetchNextArticlePage } from 'pages/Articles/model/services/fetchNextArticlePage';
 import { getArticlePageError, getArticlePageIsLoading, getArticlePageView } from '../model/selectors/selectors';
 import { articlePageActions, articlePageReducer, getArticleList } from '../model/slice/ArticlePageSlice';
 import styles from './Articles.module.scss';
@@ -30,20 +32,26 @@ const Articles = (props: ArticleProps) => {
         dispatch(articlePageActions.setViewType(view));
     }, [dispatch]);
 
+    const onLoadNextPart = useCallback(() => {
+        dispatch(fetchNextArticlePage());
+    }, [dispatch]);
+
     useEffect(() => {
-        dispatch(fetchArticlesList());
         dispatch(articlePageActions.initState());
+        dispatch(fetchArticlesList({
+            page: 1,
+        }));
     }, [dispatch]);
 
     return (
-        <div className={classNames(styles.Article, {}, [className])}>
+        <Page onScrollEnd={onLoadNextPart} className={classNames(styles.Article, {}, [className])}>
             <ArticleViewSelector selectedView={view} viewChange={viewChange} />
             <ArticleList
                 articles={articles}
                 isLoading={isLoading}
                 view={view}
             />
-        </div>
+        </Page>
     );
 };
 

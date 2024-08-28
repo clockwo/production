@@ -20,13 +20,6 @@ body {
   display: flex;
 }
 
-.flex-wrapper {
-  flex-grow: 1;
-  padding: 1.25rem 2.8rem;
-  overflow: auto;
-  max-height: calc(100vh - var(--navbar-height));
-  flex-shrink: 100;
-}
 
 .inverted {
   color: var(--inverted-primary-color) !important;

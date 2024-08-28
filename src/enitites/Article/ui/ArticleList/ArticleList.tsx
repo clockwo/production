@@ -31,14 +31,6 @@ export const ArticleList = memo((props: ArticleListProps) => {
         [styles[view]]: true,
     };
 
-    if (isLoading) {
-        return (
-            <div className={classNames(styles.ArticleList, mods, [className])}>
-                {renderSkeletons(view)}
-            </div>
-        );
-    }
-
     return (
         <div className={classNames(styles.ArticleList, mods, [className])}>
             {articles.length && articles.map((article) => (
@@ -48,6 +40,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
                     view={view}
                 />
             ))}
+            {isLoading && renderSkeletons(view)}
         </div>
     );
 });
