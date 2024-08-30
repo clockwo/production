@@ -7,7 +7,12 @@ import { useCallback, useEffect } from 'react';
 import { fetchArticlesList } from 'pages/Articles/model/services/fetchArticlesList';
 import { Page } from 'shared/ui/Page/Page';
 import { fetchNextArticlePage } from 'pages/Articles/model/services/fetchNextArticlePage';
-import { getArticlePageError, getArticlePageIsLoading, getArticlePageView } from '../model/selectors/selectors';
+import {
+    getArticlePageError,
+    getArticlePageInited,
+    getArticlePageIsLoading,
+    getArticlePageView,
+} from '../model/selectors/selectors';
 import { articlePageActions, articlePageReducer, getArticleList } from '../model/slice/ArticlePageSlice';
 import styles from './Articles.module.scss';
 
@@ -20,12 +25,13 @@ const reducers: ReducerList = {
 };
 
 const Articles = (props: ArticleProps) => {
-    useDynamicModuleLoad(reducers, true);
+    useDynamicModuleLoad(reducers, false);
     const dispatch = useAppDispatch();
     const isLoading = useSelector(getArticlePageIsLoading);
     const error = useSelector(getArticlePageError);
     const view = useSelector(getArticlePageView);
     const articles = useSelector(getArticleList.selectAll);
+    const inited = useSelector(getArticlePageInited);
     const { className } = props;
 
     const viewChange = useCallback((view: ArticleView) => {
@@ -37,11 +43,13 @@ const Articles = (props: ArticleProps) => {
     }, [dispatch]);
 
     useEffect(() => {
-        dispatch(articlePageActions.initState());
-        dispatch(fetchArticlesList({
-            page: 1,
-        }));
-    }, [dispatch]);
+        if (!inited) {
+            dispatch(articlePageActions.initState());
+            dispatch(fetchArticlesList({
+                page: 1,
+            }));
+        }
+    }, [dispatch, inited]);
 
     return (
         <Page onScrollEnd={onLoadNextPart} className={classNames(styles.Article, {}, [className])}>
