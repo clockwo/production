@@ -5,7 +5,7 @@ import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { useCallback, useEffect } from 'react';
 import { fetchArticlesList } from 'pages/Articles/model/services/fetchArticlesList';
-import { Page } from 'shared/ui/Page/Page';
+import { Page } from 'widgets/Page/ui/Page';
 import { fetchNextArticlePage } from 'pages/Articles/model/services/fetchNextArticlePage';
 import {
     getArticlePageError,
