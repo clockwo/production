@@ -1,5 +1,5 @@
 import classNames from 'shared/lib/classNames/classNames';
-import { ArticleList, ArticleView, ArticleViewSelector } from 'enitites/Article';
+import { ArticleList } from 'enitites/Article';
 import { ReducerList, useDynamicModuleLoad } from 'shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
@@ -7,13 +7,14 @@ import { useCallback, useEffect } from 'react';
 import { fetchArticlesList } from 'pages/Articles/model/services/fetchArticlesList';
 import { Page } from 'widgets/Page/ui/Page';
 import { fetchNextArticlePage } from 'pages/Articles/model/services/fetchNextArticlePage';
+import { ArticleFilters } from 'pages/Articles/ui/ArticleFilters/ArticleFilters';
 import {
     getArticlePageError,
     getArticlePageInited,
     getArticlePageIsLoading,
     getArticlePageView,
-} from '../model/selectors/selectors';
-import { articlePageActions, articlePageReducer, getArticleList } from '../model/slice/ArticlePageSlice';
+} from '../../model/selectors/selectors';
+import { articlePageActions, articlePageReducer, getArticleList } from '../../model/slice/ArticlePageSlice';
 import styles from './Articles.module.scss';
 
 interface ArticleProps {
@@ -34,10 +35,6 @@ const Articles = (props: ArticleProps) => {
     const inited = useSelector(getArticlePageInited);
     const { className } = props;
 
-    const viewChange = useCallback((view: ArticleView) => {
-        dispatch(articlePageActions.setViewType(view));
-    }, [dispatch]);
-
     const onLoadNextPart = useCallback(() => {
         dispatch(fetchNextArticlePage());
     }, [dispatch]);
@@ -53,7 +50,7 @@ const Articles = (props: ArticleProps) => {
 
     return (
         <Page onScrollEnd={onLoadNextPart} className={classNames(styles.Article, {}, [className])}>
-            <ArticleViewSelector selectedView={view} viewChange={viewChange} />
+            <ArticleFilters />
             <ArticleList
                 articles={articles}
                 isLoading={isLoading}
