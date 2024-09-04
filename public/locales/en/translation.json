@@ -50,5 +50,12 @@
     "This article doesn't exists": "This article doesn't exists",
     "Add new comment": "Add new comment",
     "Submit": "Submit",
-    "Comments": "Comments"
+    "Comments": "Comments",
+    "Ascending": "Ascending",
+    "Descending": "Descending",
+    "Order by": "Order by",
+    "Created at": "Created at",
+    "By title": "By title",
+    "By views": "By views",
+    "Sort by": "Sort by"
 }

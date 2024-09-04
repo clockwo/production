@@ -50,5 +50,12 @@
     "This article doesn't exists": "Этой статьи не существует",
     "Add new comment": "Добавить новый комментарий",
     "Submit": "Подтвердить",
-    "Comments": "Комментарии"
+    "Comments": "Комментарии",
+    "Ascending": "По возрастанию",
+    "Descending": "По убыванию",
+    "Order by": "Упорядочить",
+    "Created at": "По созданию",
+    "By title": "По имени",
+    "By views": "По просмотрам",
+    "Sort by": "Сортировать"
 }
