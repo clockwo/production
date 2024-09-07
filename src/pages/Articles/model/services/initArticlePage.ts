@@ -5,12 +5,13 @@ import { articlePageActions } from 'pages/Articles/model/slice/ArticlePageSlice'
 import { fetchArticlesList } from 'pages/Articles/model/services/fetchArticlesList';
 import { getQueryParams } from 'shared/lib/url/getQueryParams/getQueryParams';
 import { SortOrder } from 'shared/types';
-import { ArticleSortField } from 'enitites/Article/model/types/types';
+import { ArticleSortField, ArticleType } from 'enitites/Article/model/types/types';
 
 interface IQueryParams {
     sort?: ArticleSortField;
     search?: string;
     order?: SortOrder;
+    type?: ArticleType;
 }
 
 export const initArticlePage = createAsyncThunk<void, void, ThunkConfig<string>>(
@@ -27,6 +28,10 @@ export const initArticlePage = createAsyncThunk<void, void, ThunkConfig<string>>
         }
         if (params.order) {
             dispatch(articlePageActions.setOrder(params.order));
+        }
+
+        if (params.type) {
+            dispatch(articlePageActions.setType(params.type));
         }
 
         if (!inited) {

@@ -1,6 +1,7 @@
 import classNames from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { ArticleListItemSkeleton } from 'enitites/Article/ui/ArticleListItem/ArticleListItem.skeleton';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import styles from './ArticleList.module.scss';
 import { ArticleView, IArticle } from '../../model/types/types';
@@ -30,6 +31,14 @@ export const ArticleList = memo((props: ArticleListProps) => {
     const mods = {
         [styles[view]]: true,
     };
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div className={classNames(styles.ArticleList, mods, [className])}>
+                <Text size={TextSize.L} title="Ничего не найдено!" />
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(styles.ArticleList, mods, [className])}>

@@ -1,0 +1,15 @@
+.Tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab {
+  cursor: pointer;
+  border-radius: 5px;
+  padding: .5rem  1rem;
+  background-color: var(--card-background);
+}
+
+.tab.active {
+  outline: solid 1px var(--inverted-background);
+}
