@@ -12,6 +12,7 @@ import { ArticleDetailsCommentsSchema } from 'widgets/ArticleDetailsComments';
 import { AddNewCommentSchema } from 'features/AddNewComment';
 import { ArticlePageSchema } from 'pages/Articles';
 import { ScrollSaveSchema } from 'features/ScrollSave';
+import { ArticleDetailsRecommendsSchema } from 'pages/ArticleDetailsPage';
 
 export interface StateSchema {
     counter: CounterSchema
@@ -25,6 +26,7 @@ export interface StateSchema {
     articleDetailsComments?: ArticleDetailsCommentsSchema
     addNewComment?: AddNewCommentSchema
     articlePage?: ArticlePageSchema
+    articleDetailsRecommends?: ArticleDetailsRecommendsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

@@ -1,11 +1,11 @@
 import { useDispatch, useStore } from 'react-redux';
-import { ReduxStoreWithManager, StateSchemaKey } from 'app/providers/StoreProvider';
+import { ReduxStoreWithManager, StateSchema, StateSchemaKey } from 'app/providers/StoreProvider';
 import { useEffect } from 'react';
 import { Reducer } from '@reduxjs/toolkit';
 
 export type ReducerList = {
     // eslint-disable-next-line no-unused-vars
-    [name in StateSchemaKey]?: Reducer
+    [name in StateSchemaKey]?: Reducer<NonNullable<StateSchema[name]>>
 }
 
 export const useDynamicModuleLoad = (
