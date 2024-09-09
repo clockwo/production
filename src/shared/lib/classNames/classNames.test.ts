@@ -1,4 +1,4 @@
-import classNames from 'shared/lib/classNames/classNames';
+import classNames from './classNames';
 
 describe('classNames', () => {
     test('returns single class when only one class is provided', () => {

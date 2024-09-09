@@ -7,6 +7,7 @@ import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import {
     Text, TextAlign, TextColor, TextVariation,
 } from 'shared/ui/Text/Text';
+import { fetchArticleDetails } from 'enitites/Article/model/services/fetchArticleDetails/fetchArticleDetails';
 import { ArticleDetailsBlocks } from './ArticleDetailsBlocks/ArticleDetailsBlocks';
 import { ArticleDetailsHeader } from './ArticleDetailsHeader/ArticleDetailsHeader';
 import {
@@ -16,7 +17,6 @@ import {
 } from '../../model/selectors/articleDetails';
 import { ArticleDetailsErrors } from '../../model/types/articleDetailsSchema';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
-import { fetchArticleDetails } from '../../model/services/fetchArticleDetails/fetchArticleDetails';
 
 interface ArticleDetailsProps {
     id: string

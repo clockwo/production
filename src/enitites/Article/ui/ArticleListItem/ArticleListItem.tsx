@@ -1,5 +1,5 @@
 import classNames from 'shared/lib/classNames/classNames';
-import { HTMLAttributeAnchorTarget, memo } from 'react';
+import { CSSProperties, HTMLAttributeAnchorTarget, memo } from 'react';
 import EyeIcon from 'shared/assets/svg/eye.svg';
 import { Text } from 'shared/ui/Text/Text';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
@@ -17,6 +17,7 @@ interface ArticleListItemProps {
     article: IArticle;
     view: ArticleView;
     target?: HTMLAttributeAnchorTarget;
+    style?: CSSProperties;
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
@@ -25,6 +26,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         article,
         view,
         target,
+        style,
     } = props;
 
     const mods = {
@@ -35,7 +37,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         const articleText = article.blocks.find((article) => article.type === ArticleBlockType.TEXT) as ITextBlock;
 
         return (
-            <div className={classNames(styles.ArticleListItem, mods, [className])}>
+            <div className={classNames(styles.ArticleListItem, mods, [className])} style={style}>
                 <div className={styles.header}>
                     <div className={styles.headerInfo}>
                         <div className={styles.user}>
@@ -75,6 +77,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             target={target}
             to={RoutePath.article_details + article.id}
             className={classNames(styles.ArticleListItem, mods, [className])}
+            style={style}
         >
             <img className={styles.image} src={article.img} alt="" />
             <Text className={styles.createdAt} text={article.createdAt} />

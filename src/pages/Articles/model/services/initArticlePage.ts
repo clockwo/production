@@ -1,11 +1,11 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
-import { getArticlePageInited } from 'pages/Articles/model/selectors/selectors';
-import { articlePageActions } from 'pages/Articles/model/slice/ArticlePageSlice';
-import { fetchArticlesList } from 'pages/Articles/model/services/fetchArticlesList';
 import { getQueryParams } from 'shared/lib/url/getQueryParams/getQueryParams';
 import { SortOrder } from 'shared/types';
 import { ArticleSortField, ArticleType } from 'enitites/Article/model/types/types';
+import { getArticlePageInited } from '../../model/selectors/selectors';
+import { articlePageActions } from '../../model/slice/ArticlePageSlice';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList';
 
 interface IQueryParams {
     sort?: ArticleSortField;
