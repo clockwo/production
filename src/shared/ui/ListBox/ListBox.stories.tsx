@@ -29,10 +29,6 @@ export default {
                 label: 'Option 4',
             },
             {
-                value: 'Option 4',
-                label: 'Option 4',
-            },
-            {
                 value: 'Option 5',
                 label: 'Option 5',
             },

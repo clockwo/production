@@ -20,7 +20,12 @@
   justify-content: center;
   cursor: pointer;
 
-  &:hover {
+  &:hover, &[data-focus] {
     background-color: color-mix(in srgb, var(--primary-color) 10%, transparent);
   }
+
+  &[data-selected] {
+    color: var(--secondary-color);
+  }
+
 }
