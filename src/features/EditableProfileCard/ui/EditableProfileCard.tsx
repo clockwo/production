@@ -1,4 +1,3 @@
-import classNames from 'shared/lib/classNames/classNames';
 import { ReducerList, useDynamicModuleLoad } from 'shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { ProfileCard } from 'enitites/Profile';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
@@ -9,12 +8,12 @@ import { Country } from 'enitites/Country';
 import { Text, TextColor } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import { VStack } from 'shared/ui/Stack';
 import { EditableProfileHeader } from '../ui/EditableProfileHeader/EditableProfileHeader';
 import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly';
 import { fetchProfileData } from '../model/services/fetchProfileData/fetchProfileData';
 import { getProfileLoading } from '../model/selectors/getProfileLoading/getProfileLoading';
 import { getProfileError } from '../model/selectors/getProfileError/getProfileError';
-import cls from './EditableProfileCard.module.scss';
 import { profileActions, profileReducer } from '../model/slice/profileSlice';
 import { getProfileForm } from '../model/selectors/getProfileForm/getProfileForm';
 import { getProfileValidateErrors } from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
@@ -37,7 +36,6 @@ export const EditableProfileCard = (props: EditableProfileCardProps) => {
     const { id } = useParams();
 
     const isEditor = useSelector(canEditProfile);
-    console.log(isEditor);
     useEffect(() => {
         if (id) {
             dispatch(fetchProfileData(id));
@@ -90,7 +88,7 @@ export const EditableProfileCard = (props: EditableProfileCardProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(cls.EditableProfileCard, {}, [className])}>
+        <VStack gap="16">
             {isEditor && <EditableProfileHeader />}
             {
                 validateErrors?.length && (
@@ -116,6 +114,6 @@ export const EditableProfileCard = (props: EditableProfileCardProps) => {
                 onChangeCurrency={onChangeCurrency}
                 onChangeCountry={onChangeCountry}
             />
-        </div>
+        </VStack>
     );
 };

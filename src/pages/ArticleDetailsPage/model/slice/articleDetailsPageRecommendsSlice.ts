@@ -4,8 +4,8 @@ import { IArticle } from 'enitites/Article';
 import { fetchArticleRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations';
 import { ArticleDetailsRecommendsSchema } from '../types/ArticleDetailsRecommendsSchema';
 
-const recommendationAdapter = createEntityAdapter<IArticle>({
-    selectId: (article) => article.id,
+const recommendationAdapter = createEntityAdapter({
+    selectId: (article: IArticle) => article.id,
 });
 
 const articleDetailsPageRecommendsSlice = createSlice({

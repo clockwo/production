@@ -1,12 +1,12 @@
-import { Text, TextVariation } from 'shared/ui/Text/Text';
+import { Text, TextSize } from 'shared/ui/Text/Text';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
+import { HStack } from 'shared/ui/Stack';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { profileActions } from '../../model/slice/profileSlice';
-import cls from './EditableProfileHeader.module.scss';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
 
@@ -41,8 +41,8 @@ export const EditableProfileHeader = () => {
     };
 
     return (
-        <div className={cls.header}>
-            <Text variation={TextVariation.TITLE} text={t('Profile')} />
+        <HStack justify="between" max>
+            <Text size={TextSize.L} title={t('Profile')} />
             {
                 isReadonly
                     ? (
@@ -51,16 +51,16 @@ export const EditableProfileHeader = () => {
                         </Button>
                     )
                     : (
-                        <div className={cls.buttons}>
+                        <HStack gap="16">
                             <Button theme={ButtonTheme.OUTLINE_RED} size={ButtonSize.L} onClick={onCancelClick}>
                                 {t('Cancel')}
                             </Button>
                             <Button theme={ButtonTheme.OUTLINE} size={ButtonSize.L} onClick={onSaveClick}>
                                 {t('Save')}
                             </Button>
-                        </div>
+                        </HStack>
                     )
             }
-        </div>
+        </HStack>
     );
 };

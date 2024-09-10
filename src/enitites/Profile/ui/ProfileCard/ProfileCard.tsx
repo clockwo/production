@@ -76,7 +76,6 @@ export const ProfileCard: FC<ProfileCardProps> = (props: ProfileCardProps) => {
 
     return (
         <div className={classNames(cls.ProfileCard, {}, [className])}>
-
             <div className={cls.data}>
                 <Avatar url={data?.avatar} alt="User Avatar" size={128} />
                 <div className={cls.wrapper}>

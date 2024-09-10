@@ -5,7 +5,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import { Text, TextColor, TextVariation } from './Text';
 
 export default {
-    title: 'shared/Tabs',
+    title: 'shared/Text',
     component: Text,
     argTypes: {
         backgroundColor: { control: 'color' },

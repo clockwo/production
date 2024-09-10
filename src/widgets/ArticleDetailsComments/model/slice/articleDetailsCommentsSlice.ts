@@ -5,8 +5,8 @@ import { addNewCommentForArticle } from '../services/addNewCommentForArticle/add
 import type { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 import { fetchCommentsByArticleId } from '../services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 
-const commentAdapter = createEntityAdapter<IComment>({
-    selectId: (comment) => comment.id,
+const commentAdapter = createEntityAdapter({
+    selectId: (comment: IComment) => comment.id,
 });
 
 const articleDetailsCommentsSlice = createSlice({

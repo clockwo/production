@@ -7,8 +7,8 @@ import { SortOrder } from 'shared/types';
 import { ArticlePageSchema } from '../types/articlePageSchema';
 import { fetchArticlesList } from '../services/fetchArticlesList';
 
-const articleAdapter = createEntityAdapter<IArticle>({
-    selectId: (article) => article.id,
+const articleAdapter = createEntityAdapter({
+    selectId: (article: IArticle) => article.id,
 });
 
 const articlePageSlice = createSlice({
