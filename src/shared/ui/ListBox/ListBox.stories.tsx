@@ -54,6 +54,7 @@ Light.args = {
 
 export const Dark = Template.bind({});
 Dark.args = {
+    label: 'Select option',
     value: 'Option 1',
 };
 Dark.decorators = [ThemeDecorator({ theme: Theme.DARK })];

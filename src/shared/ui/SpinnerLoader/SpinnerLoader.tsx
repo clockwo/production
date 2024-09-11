@@ -1,11 +1,20 @@
-import { FC } from 'react';
-import classNames from 'shared/lib/classNames/classNames';
-import cls from './SpinnerLoader.module.scss';
+import styles from './SpinnerLoader.module.scss';
 
 interface SpinnerLoaderProps {
-    className?: string;
+    width?: number;
+    padding?: number;
 }
 
-export const SpinnerLoader: FC<SpinnerLoaderProps> = () => (
-    <div className={classNames(cls.SpinnerLoader)} />
-);
+export const SpinnerLoader = (props: SpinnerLoaderProps) => {
+    const { width, padding } = props;
+
+    return (
+        <div
+            className={styles.SpinnerLoader}
+            style={{
+                width: `${width}px`,
+                padding: `${padding}px`,
+            }}
+        />
+    );
+};

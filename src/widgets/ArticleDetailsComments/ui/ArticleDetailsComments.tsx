@@ -6,9 +6,9 @@ import { ReducerList, useDynamicModuleLoad } from 'shared/hooks/useDynamicModule
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { AddNewComment } from 'features/AddNewComment';
+import { VStack } from 'shared/ui/Stack';
 import { addNewCommentForArticle } from '../model/services/addNewCommentForArticle/addNewCommentForArticle';
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
-import styles from './ArticleDetailsComments.module.scss';
 import { articleDetailsCommentsReducer, getArticleComments } from '../model/slice/articleDetailsCommentsSlice';
 import { getArticleCommentsIsLoading } from '../model/selectors/comments';
 
@@ -42,10 +42,10 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
     }, [dispatch, articleId]);
 
     return (
-        <div className={styles.ArticleDetailsComments}>
+        <VStack gap="16">
             <Text title={t('Comments')} />
             <AddNewComment onSendSubmit={onSendSubmit} />
             <CommentList isLoading={isLoading} comments={comments} />
-        </div>
+        </VStack>
     );
 });

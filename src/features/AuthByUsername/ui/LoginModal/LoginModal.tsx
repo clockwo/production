@@ -7,6 +7,9 @@ import { SpinnerLoader } from 'shared/ui/SpinnerLoader/SpinnerLoader';
 import { getUserAuth, userActions } from 'enitites/User';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { LoginFormAsync as LoginForm } from '../LoginForm/LoginForm.async';
 
 export const LoginModal = () => {
@@ -21,12 +24,21 @@ export const LoginModal = () => {
 
     if (userAuth) {
         return (
-            <Button
-                onClick={onLogout}
-                theme={ButtonTheme.CLEAR_INVERTED}
-            >
-                {t('Logout')}
-            </Button>
+            <Dropdown
+                trigger={<Avatar size={30} url={userAuth.avatar} alt="" />}
+                options={[
+                    {
+                        id: '1',
+                        content: t('Profile'),
+                        href: `${RoutePath.profile}${userAuth.id}`,
+                    },
+                    {
+                        id: '2',
+                        onClick: onLogout,
+                        content: t('Logout'),
+                    },
+                ]}
+            />
         );
     }
 

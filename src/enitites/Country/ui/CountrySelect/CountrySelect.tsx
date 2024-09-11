@@ -1,41 +1,32 @@
-import classNames from 'shared/lib/classNames/classNames';
-
-import { Select } from 'shared/ui/Select/Select';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback } from 'react';
+import { memo } from 'react';
+import { ListBox } from 'shared/ui/ListBox/ListBox';
 import { Country } from '../../model/types/types';
 
 interface CountrySelectProps {
-    className?: string;
     value?: Country
     onChange?: (value: Country) => void
     readonly?: boolean
 }
 
 const options = [
-    { value: Country.RUSSIA, content: Country.RUSSIA },
-    { value: Country.UKRAINE, content: Country.UKRAINE },
-    { value: Country.USA, content: Country.USA },
-    { value: Country.POLAND, content: Country.POLAND },
+    { value: Country.RUSSIA, label: Country.RUSSIA },
+    { value: Country.UKRAINE, label: Country.UKRAINE },
+    { value: Country.USA, label: Country.USA },
+    { value: Country.POLAND, label: Country.POLAND },
 ];
 
-export const CountrySelect = memo(({
-    className, value, onChange, readonly,
-}: CountrySelectProps) => {
+export const CountrySelect = memo((props: CountrySelectProps) => {
     const { t } = useTranslation();
-
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Country);
-    }, [onChange]);
-
+    const { value, onChange, readonly } = props;
     return (
-        <Select
-            className={classNames('', {}, [className])}
-            label={t('Set country')}
+        <ListBox
             options={options}
             value={value}
+            onChange={onChange}
+            anchor="top"
             readonly={readonly}
-            onChange={onChangeHandler}
+            label={t('Set country')}
         />
     );
 });

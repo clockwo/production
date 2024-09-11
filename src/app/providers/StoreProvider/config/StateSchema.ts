@@ -12,12 +12,13 @@ import { ArticleDetailsCommentsSchema } from 'widgets/ArticleDetailsComments';
 import { AddNewCommentSchema } from 'features/AddNewComment';
 import { ArticlePageSchema } from 'pages/Articles';
 import { ScrollSaveSchema } from 'features/ScrollSave';
-import { ArticleDetailsRecommendsSchema } from 'pages/ArticleDetailsPage';
+import { rtkApi } from 'shared/api/rtkApi';
 
 export interface StateSchema {
     counter: CounterSchema
     user: UserSchema
     scrollSave: ScrollSaveSchema
+    [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 
     // Async reducers
     login?: LoginSchema
@@ -26,7 +27,6 @@ export interface StateSchema {
     articleDetailsComments?: ArticleDetailsCommentsSchema
     addNewComment?: AddNewCommentSchema
     articlePage?: ArticlePageSchema
-    articleDetailsRecommends?: ArticleDetailsRecommendsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

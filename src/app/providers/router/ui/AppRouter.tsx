@@ -10,7 +10,7 @@ function AppRouter() {
         const element = (
             <Suspense fallback={(
                 <PageLoader>
-                    <SpinnerLoader />
+                    <SpinnerLoader width={200} padding={15} />
                 </PageLoader>
             )}
             >

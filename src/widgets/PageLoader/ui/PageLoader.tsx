@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
-import classNames from 'shared/lib/classNames/classNames';
-import cls from './PageLoader.module.scss';
+import { Page } from 'widgets/Page';
+import { VStack } from 'shared/ui/Stack';
+import styles from './PageLoader.module.scss';
 
 interface PageLoaderProps {
     className?: string;
@@ -8,7 +9,9 @@ interface PageLoaderProps {
 }
 
 export const PageLoader = ({ children, className = '' }: PageLoaderProps) => (
-    <div className={classNames(cls.PageLoader, {}, [cls[className]])}>
-        {children}
-    </div>
+    <Page>
+        <VStack className={styles.PageLoader} justify="center" align="center">
+            {children}
+        </VStack>
+    </Page>
 );

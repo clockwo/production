@@ -7,5 +7,6 @@
     "The username must be greater than 3 characters": "The username must be greater than 3 characters",
     "The password must has special symbol": "The password must has special symbol",
     "The password must be greater than 3 characters": "The password must be greater than 3 characters",
-    "The password cannot be empty": "The password cannot be empty"
+    "The password cannot be empty": "The password cannot be empty",
+    "Profile": "Profile"
 }

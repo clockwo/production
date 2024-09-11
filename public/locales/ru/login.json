@@ -7,5 +7,6 @@
     "The username must be greater than 3 characters": "Имя пользователя должно быть больше 3-х символов",
     "The password must has special symbol": "Пароль должен содержать специальный символ",
     "The password must be greater than 3 characters": "Пароль должен быть длиннее 3 символов",
-    "The password cannot be empty": "Пароль не может быть пустым"
+    "The password cannot be empty": "Пароль не может быть пустым",
+    "Profile": "Профиль"
 }

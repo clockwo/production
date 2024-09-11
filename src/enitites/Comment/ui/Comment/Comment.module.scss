@@ -1,13 +1,4 @@
 .Comment {
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
   border: 1px solid var(--inverted-background);
   padding: 12px 16px;
-}
-
-.userInfo {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
 }
