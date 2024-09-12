@@ -42,7 +42,7 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
     }, [dispatch, articleId]);
 
     return (
-        <VStack gap="16">
+        <VStack gap="16" max>
             <Text title={t('Comments')} />
             <AddNewComment onSendSubmit={onSendSubmit} />
             <CommentList isLoading={isLoading} comments={comments} />

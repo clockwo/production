@@ -11,10 +11,11 @@ import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/get
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
 
 interface EditableProfileHeaderProps {
-    className?: string;
+    isEditor: boolean
 }
 
-export const EditableProfileHeader = () => {
+export const EditableProfileHeader = (props: EditableProfileHeaderProps) => {
+    const { isEditor } = props;
     const { t } = useTranslation();
     const isReadonly = useSelector(getProfileReadonly);
     const form = useSelector(getProfileForm);
@@ -44,22 +45,24 @@ export const EditableProfileHeader = () => {
         <HStack justify="between" max>
             <Text size={TextSize.L} title={t('Profile')} />
             {
-                isReadonly
-                    ? (
-                        <Button theme={ButtonTheme.OUTLINE} size={ButtonSize.L} onClick={onEditClick}>
-                            {t('Edit')}
-                        </Button>
-                    )
-                    : (
-                        <HStack gap="16">
-                            <Button theme={ButtonTheme.OUTLINE_RED} size={ButtonSize.L} onClick={onCancelClick}>
-                                {t('Cancel')}
+                isEditor && (
+                    isReadonly
+                        ? (
+                            <Button theme={ButtonTheme.OUTLINE} size={ButtonSize.L} onClick={onEditClick}>
+                                {t('Edit')}
                             </Button>
-                            <Button theme={ButtonTheme.OUTLINE} size={ButtonSize.L} onClick={onSaveClick}>
-                                {t('Save')}
-                            </Button>
-                        </HStack>
-                    )
+                        )
+                        : (
+                            <HStack gap="16">
+                                <Button theme={ButtonTheme.OUTLINE_RED} size={ButtonSize.L} onClick={onCancelClick}>
+                                    {t('Cancel')}
+                                </Button>
+                                <Button theme={ButtonTheme.OUTLINE} size={ButtonSize.L} onClick={onSaveClick}>
+                                    {t('Save')}
+                                </Button>
+                            </HStack>
+                        )
+                )
             }
         </HStack>
     );

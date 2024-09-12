@@ -7,7 +7,6 @@ import { Currency } from 'enitites/Currency';
 import { Country } from 'enitites/Country';
 import { Text, TextColor } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
 import { VStack } from 'shared/ui/Stack';
 import { EditableProfileHeader } from '../ui/EditableProfileHeader/EditableProfileHeader';
 import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly';
@@ -21,7 +20,7 @@ import { IValidateProfileError } from '../model/types/types';
 import { canEditProfile } from '../model/selectors/canEditProfile/canEditProfile';
 
 interface EditableProfileCardProps {
-    className?: string;
+    id: string;
 }
 
 const initialReducers: ReducerList = {
@@ -29,17 +28,14 @@ const initialReducers: ReducerList = {
 };
 
 export const EditableProfileCard = (props: EditableProfileCardProps) => {
-    const { className } = props;
+    const { id } = props;
     const dispatch = useAppDispatch();
     const { t } = useTranslation();
     useDynamicModuleLoad(initialReducers, true);
-    const { id } = useParams();
 
     const isEditor = useSelector(canEditProfile);
     useEffect(() => {
-        if (id) {
-            dispatch(fetchProfileData(id));
-        }
+        dispatch(fetchProfileData(id));
     }, [dispatch, id]);
 
     const validateErrorTranslates = {
@@ -89,7 +85,7 @@ export const EditableProfileCard = (props: EditableProfileCardProps) => {
 
     return (
         <VStack gap="16">
-            {isEditor && <EditableProfileHeader />}
+            <EditableProfileHeader isEditor={isEditor} />
             {
                 validateErrors?.length && (
                     validateErrors.map((validateError) => (

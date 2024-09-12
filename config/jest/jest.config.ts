@@ -38,6 +38,16 @@ export default {
         '<rootDir>',
     ],
 
+    reporters: [
+        'default',
+        ['jest-html-reporters', {
+            publicPath: '<rootDir>/reports/unit',
+            filename: 'report.html',
+            inlineSource: true,
+            openReport: true,
+        }],
+    ],
+
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],

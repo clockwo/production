@@ -4,16 +4,18 @@ import { ArticleList, ArticleView } from 'enitites/Article';
 import { useTranslation } from 'react-i18next';
 import { useArticleRecommendationApi } from '../../api/articleRecommendationApi';
 
+const POST_FOR_LOAD_COUNT = 5;
+
 export const ArticleRecommendation = () => {
     const { t } = useTranslation();
-    const { isLoading, data: articles, error } = useArticleRecommendationApi(4);
+    const { isLoading, data: articles, error } = useArticleRecommendationApi(POST_FOR_LOAD_COUNT);
 
-    if (isLoading) {
+    if (isLoading || error || !articles) {
         return null;
     }
 
     return (
-        <VStack gap="16">
+        <VStack gap="16" max>
             <Text title={t('Recommends')} />
             <ArticleList
                 target="_blank"

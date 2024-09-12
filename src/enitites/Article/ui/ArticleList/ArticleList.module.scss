@@ -4,11 +4,11 @@
 }
 
 .small {
-  grid-template-columns: repeat(auto-fit, 198px);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-auto-flow: dense;
   grid-auto-rows: 200px auto;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: start;
 }
 
 .big {

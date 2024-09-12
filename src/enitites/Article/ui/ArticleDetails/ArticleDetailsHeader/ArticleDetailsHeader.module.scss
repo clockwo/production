@@ -1,18 +1,8 @@
-.ArticleDetailsHeader {
-  margin-bottom: 23px;
-}
-
 .avatar {
+  display: flex;
+  align-items: center;
+  width: 100%;
   margin-bottom: 44px;
 }
 
-.articleInfo {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-
-  &:not(:last-child) {
-    margin-bottom: 5px;
-  }
-}
 

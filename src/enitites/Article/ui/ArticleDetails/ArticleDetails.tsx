@@ -8,6 +8,7 @@ import {
     Text, TextAlign, TextColor, TextVariation,
 } from 'shared/ui/Text/Text';
 import { fetchArticleDetails } from 'enitites/Article/model/services/fetchArticleDetails/fetchArticleDetails';
+import { HStack, VStack } from 'shared/ui/Stack';
 import { ArticleDetailsBlocks } from './ArticleDetailsBlocks/ArticleDetailsBlocks';
 import { ArticleDetailsHeader } from './ArticleDetailsHeader/ArticleDetailsHeader';
 import {
@@ -50,17 +51,19 @@ export const ArticleDetails = (props: ArticleDetailsProps) => {
     if (isLoading) {
         return (
             <>
-                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 44 }}>
+                <HStack max justify="center" style={{ marginBottom: 44 }}>
                     <Skeleton width={200} height={200} radius={50} />
-                </div>
-                <div style={{ display: 'grid', gap: 5 }}>
+                </HStack>
+                <VStack max gap="6">
                     <Skeleton width={500} height={37} />
                     <Skeleton width={436} height={28} />
                     <Skeleton width={60} height={20} />
                     <Skeleton width={100} height={20} />
                     <Skeleton width="100%" height={150} />
                     <Skeleton width="100%" height={60} />
-                </div>
+                    <Skeleton width="100%" height={200} />
+                    <Skeleton width="100%" height={90} />
+                </VStack>
             </>
         );
     }

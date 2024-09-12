@@ -45,7 +45,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
 
     return (
         <div className={classNames(styles.ArticleList, mods, [className])}>
-            {articles.length && articles.map((article) => (
+            {articles.length > 0 && articles.map((article) => (
                 <ArticleListItem
                     key={article.id}
                     article={article}

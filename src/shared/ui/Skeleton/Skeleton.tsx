@@ -1,15 +1,17 @@
 import { CSSProperties, HTMLAttributes } from 'react';
+import classNames from 'shared/lib/classNames/classNames';
 import cls from './Skeleton.module.scss';
 
 interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
     width: number | string;
     height: number | string;
     radius?: number | string;
+    className?: string;
 }
 
 export const Skeleton = (props: SkeletonProps) => {
     const {
-        width, height, radius, style, ...otherProps
+        width, height, radius, style, className, ...otherProps
     } = props;
 
     const styles: CSSProperties = {
@@ -20,6 +22,6 @@ export const Skeleton = (props: SkeletonProps) => {
     };
 
     return (
-        <div {...otherProps} className={cls.Skeleton} style={styles} />
+        <div {...otherProps} className={classNames(cls.Skeleton, {}, [className])} style={styles} />
     );
 };
