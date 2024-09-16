@@ -59,5 +59,8 @@
     "By views": "By views",
     "Sort by": "Sort by",
     "Recommends": "Recommends",
-    "This profile doesn't exists": "This profile doesn't exists"
+    "This profile doesn't exists": "This profile doesn't exists",
+    "You not have access to this page": {
+        "": "You not have access to this page."
+    }
 }

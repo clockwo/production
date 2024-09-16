@@ -4,6 +4,7 @@ import { AppRouteProps, routeConfig } from 'shared/config/routeConfig/routeConfi
 import { PageLoader } from 'widgets/PageLoader';
 import { SpinnerLoader } from 'shared/ui/SpinnerLoader/SpinnerLoader';
 import { RequireAuth } from 'app/providers/router/ui/RequireAuth';
+import { RequireRoles } from 'app/providers/router/ui/RequireRoles';
 
 function AppRouter() {
     const renderWithWrapper = useCallback((route: AppRouteProps) => {
@@ -25,7 +26,9 @@ function AppRouter() {
                 element={
                     route.authOnly ? (
                         <RequireAuth>
-                            {element}
+                            <RequireRoles roles={route.roles}>
+                                {element}
+                            </RequireRoles>
                         </RequireAuth>
                     ) : element
                 }
