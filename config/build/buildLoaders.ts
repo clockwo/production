@@ -1,26 +1,13 @@
 import webpack from 'webpack';
 import { IBuildOptions } from './types/config';
 import { buildCssLoader } from './loaders/buildCssLoader';
+import { buildBabelLoader } from './loaders/buildBabelLoader';
 
-export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
-    const typescriptLoader = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-    };
+export function buildLoaders(options: IBuildOptions): webpack.RuleSetRule[] {
+    const codeBabelLoader = buildBabelLoader({ ...options, isTsx: false });
+    const tsxBabelLoader = buildBabelLoader({ ...options, isTsx: true });
 
-    const babelLoader = {
-        test: /\.(js|jsx|tsx)/,
-        exclude: /node_modules/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/preset-env'],
-            },
-        },
-    };
-
-    const scssLoader = buildCssLoader(isDev);
+    const scssLoader = buildCssLoader(options.isDev);
 
     const svgLoader = {
         test: /\.svg$/,
@@ -36,5 +23,5 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
         ],
     };
 
-    return [fileLoader, svgLoader, babelLoader, typescriptLoader, scssLoader];
+    return [fileLoader, svgLoader, codeBabelLoader, tsxBabelLoader, scssLoader];
 }

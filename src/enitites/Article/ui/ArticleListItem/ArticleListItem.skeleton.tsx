@@ -1,8 +1,8 @@
 import classNames from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
+import { ArticleView } from '../../model/consts/consts';
 import styles from './ArticleListItem.module.scss';
-import { ArticleView } from '../../model/types/types';
 
 interface ArticleListItemSkeletonProps {
     className?: string;

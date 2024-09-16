@@ -3,14 +3,13 @@ import { CSSProperties, HTMLAttributeAnchorTarget, memo } from 'react';
 import EyeIcon from 'shared/assets/svg/eye.svg';
 import { Text } from 'shared/ui/Text/Text';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { ArticleTextBlock } from 'enitites/Article/ui/blocks/ArticleTextBlock/ArticleTextBlock';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
+import { ArticleTextBlock } from '../blocks/ArticleTextBlock/ArticleTextBlock';
 import styles from './ArticleListItem.module.scss';
-import {
-    ArticleBlockType, ArticleView, IArticle, ITextBlock,
-} from '../../model/types/types';
+import { IArticle, ITextBlock } from '../../model/types/types';
 
 interface ArticleListItemProps {
     className?: string;

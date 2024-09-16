@@ -1,10 +1,11 @@
 import classNames from 'shared/lib/classNames/classNames';
 import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { ArticleListItemSkeleton } from 'enitites/Article/ui/ArticleListItem/ArticleListItem.skeleton';
 import { Text, TextSize } from 'shared/ui/Text/Text';
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItem.skeleton';
+import { ArticleView } from '../../model/consts/consts';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import styles from './ArticleList.module.scss';
-import { ArticleView, IArticle } from '../../model/types/types';
+import { IArticle } from '../../model/types/types';
 
 interface ArticleListProps {
     className?: string;

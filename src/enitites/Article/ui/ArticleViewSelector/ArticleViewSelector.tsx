@@ -3,7 +3,7 @@ import TiledIcon from 'shared/assets/svg/tiled.svg';
 import ListIcon from 'shared/assets/svg/list.svg';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { memo } from 'react';
-import { ArticleView } from '../../model/types/types';
+import { ArticleView } from '../../model/consts/consts';
 import styles from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {
