@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
+import { ButtonHTMLAttributes, forwardRef, ReactNode } from 'react';
 import classNames, { TMods } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
@@ -25,7 +25,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode
 }
 
-export const Button = memo((props: IButtonProps) => {
+export const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
     const {
         className = '',
         children,
@@ -43,6 +43,7 @@ export const Button = memo((props: IButtonProps) => {
     return (
         <button
             type="button"
+            ref={ref}
             className={classNames(
                 cls.Button,
                 mods,

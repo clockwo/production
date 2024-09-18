@@ -1,13 +1,3 @@
-.Dropdown {
-
-}
-
-.button {
-  background-color: transparent;
-  border: none;
-  outline: transparent;
-}
-
 .items {
   margin-top: 2px;
   background-color: var(--background-color);
@@ -16,7 +6,7 @@
 
 .item {
   color: var(--primary-color);
-  
+
   display: flex;
   width: 100%;
   padding: 6px 12px;

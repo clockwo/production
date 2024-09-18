@@ -2,8 +2,9 @@ import {
     Menu, MenuButton, MenuItem, MenuItems,
 } from '@headlessui/react';
 import { ReactNode } from 'react';
-import { AppLink } from '../AppLink/AppLink';
+import { AppLink } from '../../../AppLink/AppLink';
 import styles from './Dropdown.module.scss';
+import cls from '../../styles/styles.module.scss';
 
 export interface DropdownOption {
     id: string;
@@ -23,7 +24,7 @@ export const Dropdown = (props: DropdownProps) => {
 
     return (
         <Menu>
-            <MenuButton className={styles.button}>
+            <MenuButton className={cls.trigger}>
                 {trigger}
             </MenuButton>
             <MenuItems transition anchor="bottom end" className={styles.items}>

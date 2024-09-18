@@ -1,0 +1,11 @@
+.Popover {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.panel {
+  background-color: var(--inverted-background);
+  border-radius: 5px;
+  padding: 6px 12px;
+}

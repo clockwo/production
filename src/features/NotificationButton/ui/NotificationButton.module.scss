@@ -1,0 +1,13 @@
+.NotificationButton {
+  color: var(--inverted-primary-color);
+  transition: scale 0.3s ease-in-out;
+
+
+  &:hover {
+    color: color-mix(in srgb, var(--inverted-primary-color), transparent 20%);
+
+    & > svg {
+      scale: 1.1;
+    }
+  }
+}

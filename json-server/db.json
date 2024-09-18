@@ -1,14 +1,48 @@
 {
-    "posts": [
+    "notifications": [
         {
             "id": "1",
-            "title": "json-server",
-            "userId": 1
+            "title": "Уведомление 1",
+            "description": "Произошло какое-то событие",
+            "userId": "1"
         },
         {
             "id": "2",
-            "title": "json-server",
-            "userId": 2
+            "title": "Уведомление 2",
+            "userId": "1",
+            "description": "Произошло какое-то событие",
+            "href": "http://localhost:3000/admin"
+        },
+        {
+            "id": "3",
+            "title": "Уведомление 3",
+            "userId": "1",
+            "description": "Произошло какое-то событие"
+        },
+        {
+            "id": "4",
+            "title": "Уведомление 4",
+            "userId": "1",
+            "description": "Произошло какое-то событие"
+        },
+        {
+            "id": "5",
+            "title": "Уведомление 5",
+            "userId": "1",
+            "description": "Произошло какое-то событие пусть тут будет очень очень много разного и интересного текста"
+        },
+        {
+            "id": "6",
+            "title": "Уведомление 6",
+            "userId": "1",
+            "description": "Произошло какое-то событие",
+            "href": "http://localhost:3000/article"
+        },
+        {
+            "id": "7",
+            "title": "Уведомление 7",
+            "userId": "1",
+            "description": "Произошло какое-то событие"
         }
     ],
     "articles": [

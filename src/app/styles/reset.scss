@@ -69,6 +69,13 @@ p:where(:not([class]):not(:last-child)) {
   margin-bottom: var(--paragraphMarginBottom);
 }
 
+
+//
+
+a {
+  text-decoration: none;
+}
+
 /**
   Упрощаем работу с изображениями
  */
@@ -121,6 +128,7 @@ body {
 svg *[fill] {
   fill: currentColor;
 }
+
 svg *[stroke] {
   stroke: currentColor;
 }
