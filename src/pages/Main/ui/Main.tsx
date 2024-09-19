@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Counter } from '@/entities/Counter/ui/Counter';
 import { Page } from '@/widgets/Page/ui/Page';
+import { StarRating } from '@/shared/ui/StarRating/StarRating';
 
 const Main = () => {
     const { t } = useTranslation();
@@ -8,7 +8,7 @@ const Main = () => {
     return (
         <Page>
             <div>{t('Main')}</div>
-            <Counter />
+            <StarRating />
         </Page>
     );
 };

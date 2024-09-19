@@ -6,7 +6,6 @@ import { NotificationList } from '@/entities/Notifications';
 import { Popover } from '@/shared/ui/popups';
 import { Drawer } from '@/shared/ui/Drawer/Drawer';
 import { useModal } from '@/shared/hooks/useModal/useModal';
-import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
 import styles from './NotificationButton.module.scss';
 
 export const NotificationButton = memo(() => {
@@ -30,11 +29,9 @@ export const NotificationButton = memo(() => {
             </BrowserView>
             <MobileView>
                 {trigger}
-                <AnimationProvider>
-                    <Drawer isOpen={isOpen} onClose={setClose}>
-                        <NotificationList />
-                    </Drawer>
-                </AnimationProvider>
+                <Drawer isOpen={isOpen} onClose={setClose}>
+                    <NotificationList />
+                </Drawer>
             </MobileView>
         </>
     );
