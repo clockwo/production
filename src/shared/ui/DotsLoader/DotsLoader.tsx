@@ -1,5 +1,5 @@
-import { Theme } from 'app/providers/ThemeProvider';
-import classNames from 'shared/lib/classNames/classNames';
+import { Theme } from '@/app/providers/ThemeProvider';
+import classNames from '@/shared/lib/classNames/classNames';
 import cls from './DotsLoader.module.scss';
 
 interface DotsLoaderProps {

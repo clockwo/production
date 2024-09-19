@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Counter } from 'enitites/Counter/ui/Counter';
-import { Page } from 'widgets/Page/ui/Page';
+import { Counter } from '@/entities/Counter/ui/Counter';
+import { Page } from '@/widgets/Page/ui/Page';
 
 const Main = () => {
     const { t } = useTranslation();

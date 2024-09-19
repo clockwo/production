@@ -1,7 +1,7 @@
-import { VStack } from 'shared/ui/Stack';
-import { Text } from 'shared/ui/Text/Text';
-import { ArticleList, ArticleView } from 'enitites/Article';
 import { useTranslation } from 'react-i18next';
+import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text/Text';
+import { ArticleList, ArticleView } from '@/entities/Article';
 import { useArticleRecommendationApi } from '../../api/articleRecommendationApi';
 
 const POST_FOR_LOAD_COUNT = 5;

@@ -1,7 +1,7 @@
 import { useDispatch, useStore } from 'react-redux';
-import { ReduxStoreWithManager, StateSchema, StateSchemaKey } from 'app/providers/StoreProvider';
 import { useEffect } from 'react';
 import { Reducer } from '@reduxjs/toolkit';
+import { ReduxStoreWithManager, StateSchema, StateSchemaKey } from '@/app/providers/StoreProvider';
 
 export type ReducerList = {
     // eslint-disable-next-line no-unused-vars

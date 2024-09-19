@@ -1,12 +1,12 @@
 import { memo, useCallback, useEffect } from 'react';
-import { CommentList } from 'enitites/Comment';
-import { Text } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
-import { ReducerList, useDynamicModuleLoad } from 'shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
-import { AddNewComment } from 'features/AddNewComment';
-import { VStack } from 'shared/ui/Stack';
+import { CommentList } from '@/entities/Comment';
+import { Text } from '@/shared/ui/Text/Text';
+import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { AddNewComment } from '@/features/AddNewComment';
+import { VStack } from '@/shared/ui/Stack';
 import { addNewCommentForArticle } from '../model/services/addNewCommentForArticle/addNewCommentForArticle';
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { articleDetailsCommentsReducer, getArticleComments } from '../model/slice/articleDetailsCommentsSlice';

@@ -1,10 +1,10 @@
-import { Avatar } from 'shared/ui/Avatar/Avatar';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import { Dropdown } from 'shared/ui/popups';
-import { getUserAuth, isUserAdmin, userActions } from 'enitites/User';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
+import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
+import { Dropdown } from '@/shared/ui/popups';
+import { getUserAuth, isUserAdmin, userActions } from '@/entities/User';
 
 export const AvatarDropdown = memo(() => {
     const { t } = useTranslation('login');

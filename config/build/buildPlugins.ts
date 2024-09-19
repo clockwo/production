@@ -39,10 +39,10 @@ export function buildPlugins({
         }),
     ];
 
-    if (isDev) {
+    if (!isDev) {
         plugins.push(new BundleAnalyzerPlugin(
             {
-                openAnalyzer: false,
+                openAnalyzer: true,
             },
         ));
     }

@@ -1,10 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import i18n from 'shared/config/i18n/i18n';
-import { ThunkConfig } from 'app/providers/StoreProvider';
-import { IComment } from 'enitites/Comment';
-import { getUserAuth } from 'enitites/User';
-import { getCommentText } from 'features/AddNewComment';
-import { getArticleDetailsData } from 'enitites/Article';
+import i18n from '@/shared/config/i18n/i18n';
+import { ThunkConfig } from '@/app/providers/StoreProvider';
+import { IComment } from '@/entities/Comment';
+import { getUserAuth } from '@/entities/User';
+import { getCommentText } from '@/features/AddNewComment';
+import { getArticleDetailsData } from '@/entities/Article';
 
 export const addNewCommentForArticle = createAsyncThunk<IComment, void, ThunkConfig<string>>(
     'articleDetailsComments/addNewCommentForArticle',

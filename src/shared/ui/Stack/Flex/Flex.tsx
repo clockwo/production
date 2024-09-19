@@ -1,5 +1,5 @@
-import classNames, { TMods } from 'shared/lib/classNames/classNames';
 import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
+import classNames, { Mods } from '@/shared/lib/classNames/classNames';
 import styles from './Flex.module.scss';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
@@ -65,7 +65,7 @@ export const Flex = (props: FlexProps) => {
         className,
     ];
 
-    const mods: TMods = {
+    const mods: Mods = {
         [styles.max]: max,
     };
 

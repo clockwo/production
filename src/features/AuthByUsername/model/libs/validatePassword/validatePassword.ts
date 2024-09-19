@@ -1,4 +1,4 @@
-import i18n from 'shared/config/i18n/i18n';
+import i18n from '@/shared/config/i18n/i18n';
 
 export enum ValidatePasswordStatus {
     EMPTY = 'empty',

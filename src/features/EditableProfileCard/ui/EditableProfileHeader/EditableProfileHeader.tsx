@@ -1,9 +1,9 @@
-import { Text, TextSize } from 'shared/ui/Text/Text';
-import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
-import { HStack } from 'shared/ui/Stack';
+import { Text, TextSize } from '@/shared/ui/Text/Text';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { HStack } from '@/shared/ui/Stack';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { profileActions } from '../../model/slice/profileSlice';

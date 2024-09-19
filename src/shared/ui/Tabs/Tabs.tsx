@@ -1,5 +1,5 @@
-import classNames from 'shared/lib/classNames/classNames';
 import { ReactNode } from 'react';
+import classNames from '@/shared/lib/classNames/classNames';
 import styles from './Tabs.module.scss';
 
 export interface TabItem<T extends string> {

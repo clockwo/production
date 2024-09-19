@@ -1,5 +1,5 @@
-import classNames, { TMods } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
+import classNames, { Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
 
 export enum TextVariation {
@@ -45,7 +45,7 @@ export const Text = memo((props: TextProps) => {
         className,
     } = props;
 
-    const mods: TMods = {
+    const mods: Mods = {
         [cls[variation]]: true,
         [cls[color]]: true,
         [cls[align]]: true,

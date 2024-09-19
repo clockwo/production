@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
-import { getUserRoles, UserRole } from 'enitites/User';
 import { Navigate, useLocation } from 'react-router-dom';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { JSX, useMemo } from 'react';
+import { getUserRoles, UserRole } from '@/entities/User';
+import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 
 interface RequireRolesProps {
     children: JSX.Element;

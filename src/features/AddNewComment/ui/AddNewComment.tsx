@@ -1,11 +1,11 @@
-import classNames from 'shared/lib/classNames/classNames';
-import { Input } from 'shared/ui/Input/Input';
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
 import { useCallback } from 'react';
-import { ReducerList, useDynamicModuleLoad } from 'shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
+import classNames from '@/shared/lib/classNames/classNames';
+import { Input } from '@/shared/ui/Input/Input';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { getCommentText } from '../model/selectors/selectors';
 import { AddNewCommentActions, AddNewCommentReducer } from '../model/slice/AddNewCommentSlice';
 import styles from './AddNewComment.module.scss';

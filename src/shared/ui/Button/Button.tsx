@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, forwardRef, ReactNode } from 'react';
-import classNames, { TMods } from 'shared/lib/classNames/classNames';
+import classNames, { Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
 export enum ButtonTheme {
@@ -35,7 +35,7 @@ export const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) =
         ...otherProps
     } = props;
 
-    const mods: TMods = {
+    const mods: Mods = {
         [cls.square]: square,
         [cls[size]]: true,
     };

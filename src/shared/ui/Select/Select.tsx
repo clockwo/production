@@ -1,5 +1,5 @@
 import { ChangeEvent, useMemo } from 'react';
-import classNames, { TMods } from 'shared/lib/classNames/classNames';
+import classNames, { Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Select.module.scss';
 
 export interface SelectOptions<T extends string> {
@@ -27,7 +27,7 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
         </option>
     )), [options]);
 
-    const mods: TMods = {};
+    const mods: Mods = {};
 
     const onChangeClick = (event: ChangeEvent<HTMLSelectElement>) => {
         onChange?.(event.target.value as T);
