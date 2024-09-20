@@ -4,11 +4,10 @@ import { VStack } from '@/shared/ui/Stack';
 import styles from './PageLoader.module.scss';
 
 interface PageLoaderProps {
-    className?: string;
     children: ReactNode;
 }
 
-export const PageLoader = ({ children, className = '' }: PageLoaderProps) => (
+export const PageLoader = ({ children }: PageLoaderProps) => (
     <Page>
         <VStack className={styles.PageLoader} justify="center" align="center">
             {children}
