@@ -2,21 +2,23 @@ import { memo, useState } from 'react';
 import styles from './StarRating.module.scss';
 import classNames from '@/shared/lib/classNames/classNames';
 import StarIcon from '@/shared/assets/svg/star.svg';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { HStack } from '@/shared/ui/Stack';
+import { Button, ButtonTheme } from '../Button/Button';
+import { HStack } from '../Stack';
 
 interface StarRatingProps {
     className?: string;
-    selected?: number;
+    rating?: number;
     onClick?: (value: number) => void;
 }
 
 const stars = [1, 2, 3, 4, 5];
 
 export const StarRating = memo((props: StarRatingProps) => {
-    const { className, selected = 0, onClick } = props;
-    const [currentStar, setCurrentStar] = useState(0);
-    const [isSelected, setIsSelected] = useState(Boolean(selected));
+    const {
+        className, rating = 0, onClick,
+    } = props;
+    const [currentStar, setCurrentStar] = useState(rating);
+    const [isSelected, setIsSelected] = useState(Boolean(rating));
 
     const onChangeStar = (value: number) => () => {
         if (!isSelected) {
@@ -48,9 +50,11 @@ export const StarRating = memo((props: StarRatingProps) => {
                         onClick={onChangeStar(star)}
                         onMouseEnter={onHover(star)}
                     >
-                        <StarIcon className={classNames('', {
-                            [styles.selected]: currentStar >= star,
-                        }, [])}
+                        <StarIcon
+                            className={classNames('', {
+                                [styles.selected]: currentStar >= star,
+                                [styles.isSelected]: isSelected,
+                            }, [])}
                         />
                     </Button>
                 ))

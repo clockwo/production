@@ -7,7 +7,7 @@ import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 import {
     Text, TextAlign, TextColor, TextVariation,
 } from '@/shared/ui/Text/Text';
-import { fetchArticleDetails } from '@/entities/Article/model/services/fetchArticleDetails/fetchArticleDetails';
+import { fetchArticleDetails } from '../../model/services/fetchArticleDetails/fetchArticleDetails';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { ArticleDetailsBlocks } from './ArticleDetailsBlocks/ArticleDetailsBlocks';
 import { ArticleDetailsHeader } from './ArticleDetailsHeader/ArticleDetailsHeader';

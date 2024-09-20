@@ -3,7 +3,7 @@ import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
 import EyeIcon from '@/shared/assets/svg/eye.svg';
 import CalendarIcon from '@/shared/assets/svg/calendar.svg';
-import { IArticle } from '@/entities/Article';
+import { IArticle } from '../../../model/types/types';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import styles from './ArticleDetailsHeader.module.scss';
 

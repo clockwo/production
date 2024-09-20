@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Comment } from '@/entities/Comment/ui/Comment/Comment';
+import { Comment } from '../Comment/Comment';
 import { VStack } from '@/shared/ui/Stack';
 import { IComment } from '../../model/types/comment';
 

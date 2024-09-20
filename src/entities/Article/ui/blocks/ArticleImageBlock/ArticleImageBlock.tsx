@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { IImageBlock } from '@/entities/Article/model/types/types';
+import { IImageBlock } from '../../../model/types/types';
 import styles from './ArticleImageBlock.module.scss';
 
 export const ArticleImageBlock = memo((props: Partial<IImageBlock>) => {

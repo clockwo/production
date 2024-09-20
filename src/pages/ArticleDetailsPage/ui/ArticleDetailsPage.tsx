@@ -7,6 +7,7 @@ import { Page } from '@/widgets/Page/ui/Page';
 import { ArticleRecommendation } from '@/features/ArticleRecommendation';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+import { ArticleRating } from '@/features/ArticleRating';
 
 const ArticleDetailsPage = () => {
     const { id } = useParams();
@@ -25,6 +26,7 @@ const ArticleDetailsPage = () => {
             <VStack gap="16" max>
                 <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
+                <ArticleRating articleId={id} />
                 <ArticleRecommendation />
                 <ArticleDetailsComments articleId={id} />
             </VStack>

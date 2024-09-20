@@ -949,5 +949,58 @@
       "username": "lenork",
       "avatar": "https://wallpapers.com/images/hd/anime-profile-picture-jioug7q8n43yhlwn.jpg"
     }
+  ],
+  "article-rating": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Отличная статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 3,
+      "feedback": "Отличная статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 3,
+      "id": "EIqpRz7"
+    },
+    {
+      "userId": "1",
+      "articleId": "8",
+      "rate": 4,
+      "id": "KLChFNf"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 3,
+      "id": "uzx1RSt"
+    },
+    {
+      "userId": "1",
+      "articleId": "16",
+      "rate": 4,
+      "id": "mW1z2v6"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 5,
+      "feedback": "СОЙДЕТ",
+      "id": "2iRn6mC"
+    },
+    {
+      "userId": "1",
+      "articleId": "18",
+      "rate": 2,
+      "id": "E-Tr2bn"
+    }
   ]
 }
