@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { EditableProfileCard } from '@/features/EditableProfileCard';
-import { Page } from '@/widgets/Page/ui/Page';
+import { Page } from '@/widgets/Page';
 import { Text } from '@/shared/ui/Text/Text';
 
 const Profile = () => {

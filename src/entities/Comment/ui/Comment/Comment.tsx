@@ -1,12 +1,12 @@
 import { memo } from 'react';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Text } from '@/shared/ui/Text/Text';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { IComment } from '../../model/types/comment';
 import styles from './Comment.module.scss';
+import { getRouteProfile } from '@/shared/const/router';
 
 interface CommentProps {
     comment: IComment;
@@ -32,7 +32,7 @@ export const Comment = memo((props: CommentProps) => {
 
     return (
         <VStack gap="8" className={styles.Comment} max>
-            <AppLink to={RoutePath.profile + comment.user.id} replace>
+            <AppLink to={getRouteProfile(comment.user.id)} replace>
                 <HStack gap="8">
                     <Avatar size={30} url={comment.user.avatar} alt="" />
                     <Text text={comment.user.username} />

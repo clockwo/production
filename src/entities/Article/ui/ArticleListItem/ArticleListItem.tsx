@@ -4,12 +4,12 @@ import EyeIcon from '@/shared/assets/svg/eye.svg';
 import { Text } from '@/shared/ui/Text/Text';
 import { Avatar } from '@/shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { AppLink } from '@/shared/ui/AppLink/AppLink';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import { ArticleTextBlock } from '../blocks/ArticleTextBlock/ArticleTextBlock';
 import styles from './ArticleListItem.module.scss';
 import { IArticle, ITextBlock } from '../../model/types/types';
+import { getRouteArticleDetails } from '@/shared/const/router';
 
 interface ArticleListItemProps {
     className?: string;
@@ -58,7 +58,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         && <ArticleTextBlock className={styles.textBlock} paragraphs={articleText.paragraphs} />}
 
                     <div className={styles.bottomSection}>
-                        <AppLink to={RoutePath.article_details + article.id}>
+                        <AppLink to={getRouteArticleDetails(article.id)}>
                             <Button theme={ButtonTheme.OUTLINE}>Читать далее...</Button>
                         </AppLink>
                         <div className={styles.viewers}>
@@ -74,7 +74,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     return (
         <AppLink
             target={target}
-            to={RoutePath.article_details + article.id}
+            to={getRouteArticleDetails(article.id)}
             className={classNames(styles.ArticleListItem, mods, [className])}
             style={style}
         >

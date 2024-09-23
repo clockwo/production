@@ -2,7 +2,7 @@ import { useCallback, useEffect } from 'react';
 import classNames from '@/shared/lib/classNames/classNames';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 
-import { Page } from '@/widgets/Page/ui/Page';
+import { Page } from '@/widgets/Page';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { initArticlePage } from '../../model/services/initArticlePage';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';

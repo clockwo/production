@@ -1,9 +1,7 @@
 import { useCallback, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import classNames from '@/shared/lib/classNames/classNames';
-import {
-    ArticleSelectSort, ArticleSortField, ArticleType, ArticleView, ArticleViewSelector,
-} from '@/entities/Article';
+import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { Input } from '@/shared/ui/Input/Input';
 import { SortOrder } from '@/shared/types';
@@ -19,6 +17,8 @@ import {
     getArticlePageView,
 } from '../../model/selectors/selectors';
 import styles from './ArticleFilters.module.scss';
+import { ArticleSelectSort } from '@/features/ArticleSelectSort';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 
 interface ArticleFiltersProps {
     className?: string;

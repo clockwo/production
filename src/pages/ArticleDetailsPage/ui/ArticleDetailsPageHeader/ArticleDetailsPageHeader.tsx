@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import { useCallback } from 'react';
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig';
 import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { getRouteArticle } from '@/shared/const/router';
 
 export const ArticleDetailsPageHeader = () => {
     const navigate = useNavigate();
     const onBackToList = useCallback(() => {
-        navigate(RoutePath.article);
+        navigate(getRouteArticle());
     }, [navigate]);
 
     return (
