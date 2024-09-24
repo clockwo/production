@@ -1,6 +1,6 @@
-import { Theme } from '@/app/providers/ThemeProvider';
 import classNames from '@/shared/lib/classNames/classNames';
 import cls from './DotsLoader.module.scss';
+import { Theme } from '@/shared/const/theme';
 
 interface DotsLoaderProps {
     theme: Theme

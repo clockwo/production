@@ -43,6 +43,10 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'zerg314-plugin/path-checker': ['error', { alias: '@' }],
+        'zerg314-plugin/layer-imports': ['error', {
+            ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            alias: '@',
+        }],
         'zerg314-plugin/public-api-import': ['error', {
             alias: '@',
             testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx'],

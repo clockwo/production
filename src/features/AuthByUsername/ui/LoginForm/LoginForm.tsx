@@ -6,7 +6,6 @@ import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { Text, TextColor, TextVariation } from '@/shared/ui/Text/Text';
 import { DotsLoader } from '@/shared/ui/DotsLoader/DotsLoader';
-import { useTheme } from '@/app/providers/ThemeProvider';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { validatePassword } from '../../model/libs/validatePassword/validatePassword';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
@@ -17,6 +16,7 @@ import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLogi
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { getLoginLoading } from '../../model/selectors/getLoginLoading/getLoginLoading';
+import { useTheme } from '@/shared/hooks/useTheme/useTheme';
 
 const initialReducers: ReducerList = {
     login: loginReducer,

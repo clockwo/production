@@ -1,18 +1,21 @@
 import { memo, Suspense, useCallback } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { AppRouteProps, routeConfig } from '@/app/providers/router/model/routeConfig';
+import { AppRouteProps, routeConfig } from '../model/routeConfig';
 import { PageLoader } from '@/widgets/PageLoader';
 import { SpinnerLoader } from '@/shared/ui/SpinnerLoader/SpinnerLoader';
-import { RequireAuth } from '@/app/providers/router/ui/RequireAuth';
-import { RequireRoles } from '@/app/providers/router/ui/RequireRoles';
+import { RequireAuth } from '../ui/RequireAuth';
+import { RequireRoles } from '../ui/RequireRoles';
+import { Page } from '@/widgets/Page';
 
 function AppRouter() {
     const renderWithWrapper = useCallback((route: AppRouteProps) => {
         const element = (
             <Suspense fallback={(
-                <PageLoader>
-                    <SpinnerLoader width={200} padding={15} />
-                </PageLoader>
+                <Page>
+                    <PageLoader>
+                        <SpinnerLoader width={200} padding={15} />
+                    </PageLoader>
+                </Page>
             )}
             >
                 {route.element}
