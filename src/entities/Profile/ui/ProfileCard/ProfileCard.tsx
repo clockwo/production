@@ -1,10 +1,10 @@
 import { CSSProperties, FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import classNames from '@/shared/lib/classNames/classNames';
-import { Text, TextAlign, TextColor } from '@/shared/ui/Text/Text';
-import { Input } from '@/shared/ui/Input/Input';
-import { SpinnerLoader } from '@/shared/ui/SpinnerLoader/SpinnerLoader';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
+import { Text, TextAlign, TextColor } from '@/shared/ui/Text';
+import { Input } from '@/shared/ui/Input';
+import { SpinnerLoader } from '@/shared/ui/SpinnerLoader';
+import { Avatar } from '@/shared/ui/Avatar';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { Country, CountrySelect } from '@/entities/Country';
 import { IProfile } from '../../model/types/types';

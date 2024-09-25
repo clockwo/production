@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import classNames from '@/shared/lib/classNames/classNames';
 import { ICodeBlock } from '../../../model/types/types';
-import { Button } from '@/shared/ui/Button/Button';
+import { Button } from '@/shared/ui/Button';
 import CopyIcon from '@/shared/assets/svg/copy.svg';
 import styles from './ArticleCodeBlock.module.scss';
 

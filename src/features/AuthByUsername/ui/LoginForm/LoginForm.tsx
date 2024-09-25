@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { memo, useCallback, useState } from 'react';
-import { Input } from '@/shared/ui/Input/Input';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { Input } from '@/shared/ui/Input';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { Text, TextColor, TextVariation } from '@/shared/ui/Text/Text';
-import { DotsLoader } from '@/shared/ui/DotsLoader/DotsLoader';
+import { Text, TextColor, TextVariation } from '@/shared/ui/Text';
+import { DotsLoader } from '@/shared/ui/DotsLoader';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { validatePassword } from '../../model/libs/validatePassword/validatePassword';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';

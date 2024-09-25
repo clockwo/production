@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import classNames from '@/shared/lib/classNames/classNames';
 import ThemeIcon from '@/shared/assets/svg/theme.svg';
-import { Button } from '@/shared/ui/Button/Button';
+import { Button } from '@/shared/ui/Button';
 import cls from './ThemeSwitcher.module.scss';
 import { useTheme } from '@/shared/hooks/useTheme/useTheme';
 

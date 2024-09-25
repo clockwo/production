@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArticleDetails } from '@/entities/Article';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 import { ArticleDetailsComments } from '@/widgets/ArticleDetailsComments';
 import { Page } from '@/widgets/Page';
 import { ArticleRecommendation } from '@/features/ArticleRecommendation';

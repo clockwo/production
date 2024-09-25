@@ -1,5 +1,5 @@
 import { VStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 import classNames from '@/shared/lib/classNames/classNames';
 import styles from './Notification.module.scss';
 import type { Notification as NotificationType } from '../../model/types/notification';

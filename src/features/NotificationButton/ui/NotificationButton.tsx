@@ -1,10 +1,10 @@
 import { memo } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 import NotificationsIcon from '@/shared/assets/svg/notifications.svg';
 import { NotificationList } from '@/entities/Notifications';
 import { Popover } from '@/shared/ui/popups';
-import { Drawer } from '@/shared/ui/Drawer/Drawer';
+import { Drawer } from '@/shared/ui/Drawer';
 import { useModal } from '@/shared/hooks/useModal/useModal';
 import styles from './NotificationButton.module.scss';
 

@@ -1,7 +1,7 @@
 import { MouseEvent, ReactNode } from 'react';
 import classNames, { Mods } from '@/shared/lib/classNames/classNames';
 import { useModalAnimated } from '@/shared/hooks/useModalAnimated/useModalAnimated';
-import { Portal } from '../../Portal/Portal';
+import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 
 interface ModalProps {

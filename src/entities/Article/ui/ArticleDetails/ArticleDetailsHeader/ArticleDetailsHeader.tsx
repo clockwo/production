@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text/Text';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
 import EyeIcon from '@/shared/assets/svg/eye.svg';
 import CalendarIcon from '@/shared/assets/svg/calendar.svg';
 import { IArticle } from '../../../model/types/types';

@@ -2,7 +2,7 @@ import { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { CommentList } from '@/entities/Comment';
-import { Text } from '@/shared/ui/Text/Text';
+import { Text } from '@/shared/ui/Text';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { AddNewComment } from '@/features/AddNewComment';

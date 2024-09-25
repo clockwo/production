@@ -3,14 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { BrowserView, MobileView } from 'react-device-detect';
 import classNames from '@/shared/lib/classNames/classNames';
 import styles from './RatingCard.module.scss';
-import { StarRating } from '@/shared/ui/StarRating/StarRating';
+import { StarRating } from '@/shared/ui/StarRating';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import { Text, TextColor } from '@/shared/ui/Text/Text';
-import { Modal } from '@/shared/ui/Modal/ui/Modal';
+import { Text, TextColor } from '@/shared/ui/Text';
+import { Modal } from '@/shared/ui/Modal';
 import { useModal } from '@/shared/hooks/useModal/useModal';
-import { Input } from '@/shared/ui/Input/Input';
-import { Drawer } from '@/shared/ui/Drawer/Drawer';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { Input } from '@/shared/ui/Input';
+import { Drawer } from '@/shared/ui/Drawer';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
 
 interface RatingCardProps {
     className?: string;

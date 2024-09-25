@@ -1,8 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { Suspense } from 'react';
-import { Modal } from '@/shared/ui/Modal/ui/Modal';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { SpinnerLoader } from '@/shared/ui/SpinnerLoader/SpinnerLoader';
+import { Modal } from '@/shared/ui/Modal';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { SpinnerLoader } from '@/shared/ui/SpinnerLoader';
 import { LoginFormAsync as LoginForm } from '../LoginForm/LoginForm.async';
 
 interface LoginModalProps {

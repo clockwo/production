@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { Skeleton } from '@/shared/ui/Skeleton/Skeleton';
+import { Skeleton } from '@/shared/ui/Skeleton';
 import {
     Text, TextAlign, TextColor, TextVariation,
-} from '@/shared/ui/Text/Text';
+} from '@/shared/ui/Text';
 import { fetchArticleDetails } from '../../model/services/fetchArticleDetails/fetchArticleDetails';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import { ArticleDetailsBlocks } from './ArticleDetailsBlocks/ArticleDetailsBlocks';

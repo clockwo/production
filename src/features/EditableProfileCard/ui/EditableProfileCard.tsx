@@ -6,7 +6,7 @@ import { ProfileCard } from '@/entities/Profile';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { Text, TextColor } from '@/shared/ui/Text/Text';
+import { Text, TextColor } from '@/shared/ui/Text';
 import { VStack } from '@/shared/ui/Stack';
 import { EditableProfileHeader } from '../ui/EditableProfileHeader/EditableProfileHeader';
 import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly';

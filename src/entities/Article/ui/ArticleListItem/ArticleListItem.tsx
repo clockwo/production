@@ -1,10 +1,10 @@
 import { CSSProperties, HTMLAttributeAnchorTarget, memo } from 'react';
 import classNames from '@/shared/lib/classNames/classNames';
 import EyeIcon from '@/shared/assets/svg/eye.svg';
-import { Text } from '@/shared/ui/Text/Text';
-import { Avatar } from '@/shared/ui/Avatar/Avatar';
-import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
-import { AppLink } from '@/shared/ui/AppLink/AppLink';
+import { Text } from '@/shared/ui/Text';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { AppLink } from '@/shared/ui/AppLink';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
 import { ArticleTextBlock } from '../blocks/ArticleTextBlock/ArticleTextBlock';
 import styles from './ArticleListItem.module.scss';

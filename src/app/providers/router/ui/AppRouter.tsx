@@ -2,7 +2,7 @@ import { memo, Suspense, useCallback } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { AppRouteProps, routeConfig } from '../model/routeConfig';
 import { PageLoader } from '@/widgets/PageLoader';
-import { SpinnerLoader } from '@/shared/ui/SpinnerLoader/SpinnerLoader';
+import { SpinnerLoader } from '@/shared/ui/SpinnerLoader';
 import { RequireAuth } from '../ui/RequireAuth';
 import { RequireRoles } from '../ui/RequireRoles';
 import { Page } from '@/widgets/Page';

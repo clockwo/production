@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button';
+import { Text, TextSize } from '@/shared/ui/Text';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { HStack } from '@/shared/ui/Stack';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
