@@ -1,8 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { ThunkConfig } from '@/app/providers/StoreProvider';
-import { IArticle } from '../../types/types';
+
 import { ArticleDetailsErrors } from '../../types/articleDetailsSchema';
+import { IArticle } from '../../types/types';
+
+import { ThunkConfig } from '@/app/providers/StoreProvider';
 
 const errors: Record<number, ArticleDetailsErrors> = {
     404: ArticleDetailsErrors.NOT_FOUND,

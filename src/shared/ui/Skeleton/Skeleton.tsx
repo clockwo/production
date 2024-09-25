@@ -1,6 +1,8 @@
 import { CSSProperties, HTMLAttributes } from 'react';
-import classNames from '@/shared/lib/classNames/classNames';
+
 import cls from './Skeleton.module.scss';
+
+import classNames from '@/shared/lib/classNames/classNames';
 
 interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
     width: number | string;

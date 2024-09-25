@@ -1,7 +1,9 @@
 import { memo } from 'react';
-import { Comment } from '../Comment/Comment';
-import { VStack } from '@/shared/ui/Stack';
+
 import { IComment } from '../../model/types/comment';
+import { Comment } from '../Comment/Comment';
+
+import { VStack } from '@/shared/ui/Stack';
 
 interface CommentListProps {
     comments: IComment[];

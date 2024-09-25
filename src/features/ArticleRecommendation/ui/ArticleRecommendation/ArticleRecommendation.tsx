@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next';
+
+import { useArticleRecommendationApi } from '../../api/articleRecommendationApi';
+
+import { ArticleList, ArticleView } from '@/entities/Article';
 import { VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
-import { ArticleList, ArticleView } from '@/entities/Article';
-import { useArticleRecommendationApi } from '../../api/articleRecommendationApi';
 
 const POST_FOR_LOAD_COUNT = 5;
 

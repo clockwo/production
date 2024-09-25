@@ -1,8 +1,10 @@
 import { memo } from 'react';
-import { Text } from '@/shared/ui/Text';
-import classNames from '@/shared/lib/classNames/classNames';
-import styles from './ArticleTextBlock.module.scss';
+
 import { ITextBlock } from '../../../model/types/types';
+import styles from './ArticleTextBlock.module.scss';
+
+import classNames from '@/shared/lib/classNames/classNames';
+import { Text } from '@/shared/ui/Text';
 
 interface ArticleTextBlockProps extends Partial<ITextBlock> {
     className?: string;

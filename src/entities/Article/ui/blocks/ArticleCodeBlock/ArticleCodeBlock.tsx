@@ -1,9 +1,11 @@
 import { memo } from 'react';
-import classNames from '@/shared/lib/classNames/classNames';
+
 import { ICodeBlock } from '../../../model/types/types';
-import { Button } from '@/shared/ui/Button';
-import CopyIcon from '@/shared/assets/svg/copy.svg';
 import styles from './ArticleCodeBlock.module.scss';
+
+import CopyIcon from '@/shared/assets/svg/copy.svg';
+import classNames from '@/shared/lib/classNames/classNames';
+import { Button } from '@/shared/ui/Button';
 
 interface ArticleCodeBlockProps extends Partial<ICodeBlock> {
     className?: string;

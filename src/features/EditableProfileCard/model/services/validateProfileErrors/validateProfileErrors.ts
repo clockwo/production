@@ -1,5 +1,6 @@
-import { IProfile } from '@/entities/Profile';
 import { IValidateProfileError } from '../../types/types';
+
+import { IProfile } from '@/entities/Profile';
 
 export const validateProfileErrors = (profile: IProfile | undefined) => {
     if (!profile) {

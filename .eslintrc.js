@@ -14,10 +14,10 @@ module.exports = {
         ecmaFeatures: {
             jsx: true,
         },
-        ecmaVersion: 'latest',
         sourceType: 'module',
+        ecmaVersion: 'latest',
     },
-    plugins: ['react', '@typescript-eslint', 'zerg314-plugin'],
+    plugins: ['react', '@typescript-eslint', 'zerg314-plugin', 'simple-import-sort'],
     rules: {
         indent: [2, 4],
         'react/jsx-indent': [2, 4],
@@ -51,6 +51,21 @@ module.exports = {
             alias: '@',
             testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx'],
         }],
+        'simple-import-sort/imports': ['error', {
+            groups: [
+                ['^\\u0000'],
+                ['^node:'],
+                ['^app/'],
+                ['^pages/'],
+                ['^widgets/'],
+                ['^features/'],
+                ['^entities/'],
+                ['^shared/'],
+                ['^@?\\w'],
+                ['^\\.'],
+            ],
+        }],
+        'simple-import-sort/exports': 'error',
     },
     globals: {
         __IS_DEV__: true,

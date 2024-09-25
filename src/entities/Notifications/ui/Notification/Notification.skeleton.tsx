@@ -1,6 +1,7 @@
-import { VStack } from '@/shared/ui/Stack';
-import { Skeleton } from '@/shared/ui/Skeleton';
 import styles from './Notification.module.scss';
+
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { VStack } from '@/shared/ui/Stack';
 
 export const NotificationSkeleton = () => (
     <VStack className={styles.Notification} max>

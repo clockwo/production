@@ -1,7 +1,8 @@
-import webpack from 'webpack';
 import path from 'path';
-import { IBuildPaths } from '../build/types/config';
+import webpack from 'webpack';
+
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
+import { IBuildPaths } from '../build/types/config';
 
 const config = {
     stories: [

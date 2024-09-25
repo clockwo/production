@@ -1,23 +1,25 @@
 import { useCallback, useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
+import { useSelector } from 'react-redux';
+
+import { canEditProfile } from '../model/selectors/canEditProfile/canEditProfile';
+import { getProfileError } from '../model/selectors/getProfileError/getProfileError';
+import { getProfileForm } from '../model/selectors/getProfileForm/getProfileForm';
+import { getProfileLoading } from '../model/selectors/getProfileLoading/getProfileLoading';
+import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly';
+import { getProfileValidateErrors } from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+import { fetchProfileData } from '../model/services/fetchProfileData/fetchProfileData';
+import { profileActions, profileReducer } from '../model/slice/profileSlice';
+import { IValidateProfileError } from '../model/types/types';
+import { EditableProfileHeader } from '../ui/EditableProfileHeader/EditableProfileHeader';
+
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
 import { ProfileCard } from '@/entities/Profile';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { Currency } from '@/entities/Currency';
-import { Country } from '@/entities/Country';
-import { Text, TextColor } from '@/shared/ui/Text';
+import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { VStack } from '@/shared/ui/Stack';
-import { EditableProfileHeader } from '../ui/EditableProfileHeader/EditableProfileHeader';
-import { getProfileReadonly } from '../model/selectors/getProfileReadonly/getProfileReadonly';
-import { fetchProfileData } from '../model/services/fetchProfileData/fetchProfileData';
-import { getProfileLoading } from '../model/selectors/getProfileLoading/getProfileLoading';
-import { getProfileError } from '../model/selectors/getProfileError/getProfileError';
-import { profileActions, profileReducer } from '../model/slice/profileSlice';
-import { getProfileForm } from '../model/selectors/getProfileForm/getProfileForm';
-import { getProfileValidateErrors } from '../model/selectors/getProfileValidateErrors/getProfileValidateErrors';
-import { IValidateProfileError } from '../model/types/types';
-import { canEditProfile } from '../model/selectors/canEditProfile/canEditProfile';
+import { Text, TextColor } from '@/shared/ui/Text';
 
 interface EditableProfileCardProps {
     id: string;

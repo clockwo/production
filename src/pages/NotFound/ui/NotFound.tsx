@@ -1,8 +1,10 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+
+import cls from './NotFound.module.scss';
+
 import classNames from '@/shared/lib/classNames/classNames';
 import { Page } from '@/widgets/Page';
-import cls from './NotFound.module.scss';
 
 interface NotFoundProps {
     className?: string;

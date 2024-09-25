@@ -1,5 +1,6 @@
-import classNames from '@/shared/lib/classNames/classNames';
 import styles from './Overlay.module.scss';
+
+import classNames from '@/shared/lib/classNames/classNames';
 
 interface OverlayProps {
     className?: string;

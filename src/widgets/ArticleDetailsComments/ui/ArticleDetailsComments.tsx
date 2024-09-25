@@ -1,16 +1,18 @@
 import { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { CommentList } from '@/entities/Comment';
-import { Text } from '@/shared/ui/Text';
-import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { AddNewComment } from '@/features/AddNewComment';
-import { VStack } from '@/shared/ui/Stack';
+
+import { getArticleCommentsIsLoading } from '../model/selectors/comments';
 import { addNewCommentForArticle } from '../model/services/addNewCommentForArticle/addNewCommentForArticle';
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { articleDetailsCommentsReducer, getArticleComments } from '../model/slice/articleDetailsCommentsSlice';
-import { getArticleCommentsIsLoading } from '../model/selectors/comments';
+
+import { CommentList } from '@/entities/Comment';
+import { AddNewComment } from '@/features/AddNewComment';
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
+import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
 
 const reducers: ReducerList = {
     articleDetailsComments: articleDetailsCommentsReducer,

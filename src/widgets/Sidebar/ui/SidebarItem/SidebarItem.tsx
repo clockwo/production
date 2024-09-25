@@ -1,10 +1,12 @@
 import React, { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
-import { getUserAuth } from '@/entities/User';
+
 import { ISidebarItem } from '../../model/types/types';
 import cls from './SidebarItem.module.scss';
+
+import { getUserAuth } from '@/entities/User';
+import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
 
 interface SidebarItemProps extends ISidebarItem {
     collapsed: boolean,

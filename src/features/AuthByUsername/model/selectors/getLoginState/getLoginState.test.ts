@@ -1,6 +1,7 @@
-import { StateSchema } from '@/app/providers/StoreProvider';
 import { LoginSchema } from '../../types/loginSchema';
 import { getLoginState } from './getLoginState';
+
+import { StateSchema } from '@/app/providers/StoreProvider';
 
 describe('getLoadingPassword', () => {
     test('should return admin', () => {

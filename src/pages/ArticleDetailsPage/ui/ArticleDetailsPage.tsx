@@ -1,13 +1,15 @@
-import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
+
+import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader/ArticleDetailsPageHeader';
+
 import { ArticleDetails } from '@/entities/Article';
+import { ArticleRating } from '@/features/ArticleRating';
+import { ArticleRecommendation } from '@/features/ArticleRecommendation';
+import { VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 import { ArticleDetailsComments } from '@/widgets/ArticleDetailsComments';
 import { Page } from '@/widgets/Page';
-import { ArticleRecommendation } from '@/features/ArticleRecommendation';
-import { VStack } from '@/shared/ui/Stack';
-import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader/ArticleDetailsPageHeader';
-import { ArticleRating } from '@/features/ArticleRating';
 
 const ArticleDetailsPage = () => {
     const { id } = useParams();

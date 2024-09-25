@@ -1,9 +1,10 @@
 import { Story } from '@storybook/react';
+
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
-import { loginReducer } from '@/features/AuthByUsername/testing';
-import { ReducerList } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { profileReducer } from '@/features/EditableProfileCard/testing';
 import { articleDetailsReducer } from '@/entities/Article/testing';
+import { loginReducer } from '@/features/AuthByUsername/testing';
+import { profileReducer } from '@/features/EditableProfileCard/testing';
+import { ReducerList } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 
 const defaultAsyncReducers: ReducerList = {
     login: loginReducer,

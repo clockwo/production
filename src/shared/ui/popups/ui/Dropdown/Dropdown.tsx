@@ -2,9 +2,10 @@ import {
     Menu, MenuButton, MenuItem, MenuItems,
 } from '@headlessui/react';
 import { ReactNode } from 'react';
+
 import { AppLink } from '../../../AppLink/AppLink';
-import styles from './Dropdown.module.scss';
 import cls from '../../styles/styles.module.scss';
+import styles from './Dropdown.module.scss';
 
 export interface DropdownOption {
     id: string;

@@ -1,14 +1,16 @@
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { Text, TextSize } from '@/shared/ui/Text';
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { HStack } from '@/shared/ui/Stack';
-import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
+
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
-import { profileActions } from '../../model/slice/profileSlice';
+import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { getProfileReadonly } from '../../model/selectors/getProfileReadonly/getProfileReadonly';
 import { updateProfileData } from '../../model/services/updateProfileData/updateProfileData';
+import { profileActions } from '../../model/slice/profileSlice';
+
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
+import { HStack } from '@/shared/ui/Stack';
+import { Text, TextSize } from '@/shared/ui/Text';
 
 interface EditableProfileHeaderProps {
     isEditor: boolean

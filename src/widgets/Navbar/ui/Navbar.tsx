@@ -1,13 +1,15 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
-import classNames from '@/shared/lib/classNames/classNames';
-import { LoginModal } from '@/features/AuthByUsername';
-import { useModal } from '@/shared/hooks/useModal/useModal';
-import { getUserAuth } from '@/entities/User';
-import { HStack } from '@/shared/ui/Stack';
-import { NotificationButton } from '@/features/NotificationButton';
-import { AvatarDropdown } from '@/features/AvatarDropdown';
+
 import cls from './Navbar.module.scss';
+
+import { getUserAuth } from '@/entities/User';
+import { LoginModal } from '@/features/AuthByUsername';
+import { AvatarDropdown } from '@/features/AvatarDropdown';
+import { NotificationButton } from '@/features/NotificationButton';
+import { useModal } from '@/shared/hooks/useModal/useModal';
+import classNames from '@/shared/lib/classNames/classNames';
+import { HStack } from '@/shared/ui/Stack';
 
 interface INavbarProps {
     className?: string;

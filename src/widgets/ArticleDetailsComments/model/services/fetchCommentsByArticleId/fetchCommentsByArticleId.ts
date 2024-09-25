@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+
 import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { IComment } from '@/entities/Comment';
 

@@ -1,22 +1,24 @@
+import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { memo, useCallback, useState } from 'react';
-import { Input } from '@/shared/ui/Input';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { Text, TextColor, TextVariation } from '@/shared/ui/Text';
-import { DotsLoader } from '@/shared/ui/DotsLoader';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+
 import { validatePassword } from '../../model/libs/validatePassword/validatePassword';
-import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { validateUsername } from '../../model/libs/validateUsername/validateUsername';
-import { loginActions, loginReducer } from '../../model/slice/loginSlice';
-import cls from './LoginForm.module.scss';
-import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
-import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
 import { getLoginLoading } from '../../model/selectors/getLoginLoading/getLoginLoading';
+import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
+import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
+import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
+import { loginActions, loginReducer } from '../../model/slice/loginSlice';
+import cls from './LoginForm.module.scss';
+
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { useTheme } from '@/shared/hooks/useTheme/useTheme';
+import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { DotsLoader } from '@/shared/ui/DotsLoader';
+import { Input } from '@/shared/ui/Input';
+import { Text, TextColor, TextVariation } from '@/shared/ui/Text';
 
 const initialReducers: ReducerList = {
     login: loginReducer,

@@ -3,6 +3,7 @@ import {
 } from '@headlessui/react';
 import { AnchorPropsWithSelection } from '@headlessui/react/dist/internal/floating';
 import { ReactNode } from 'react';
+
 import styles from './ListBox.module.scss';
 
 export interface ListBoxOption<T extends string> {

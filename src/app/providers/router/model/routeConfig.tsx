@@ -1,13 +1,14 @@
 import { RouteProps } from 'react-router-dom';
-import { MainPage } from '@/pages/Main';
+
+import { UserRole } from '@/entities/User';
 import { AboutPage } from '@/pages/About';
+import { AdminPanelPage } from '@/pages/AdminPanelPage';
+import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
+import { ArticlesPage } from '@/pages/Articles';
+import { ForbiddenPage } from '@/pages/ForbiddenPage';
+import { MainPage } from '@/pages/Main';
 import { NotFoundPage } from '@/pages/NotFound';
 import { ProfilePage } from '@/pages/Profile';
-import { ArticlesPage } from '@/pages/Articles';
-import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
-import { AdminPanelPage } from '@/pages/AdminPanelPage';
-import { UserRole } from '@/entities/User';
-import { ForbiddenPage } from '@/pages/ForbiddenPage';
 import {
     getRouteAbout,
     getRouteAdminPanel,

@@ -1,6 +1,7 @@
+import { JSX, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate, useLocation } from 'react-router-dom';
-import { JSX, useMemo } from 'react';
+
 import { getUserRoles, UserRole } from '@/entities/User';
 import { getRouteForbidden } from '@/shared/const/router';
 

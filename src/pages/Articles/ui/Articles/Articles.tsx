@@ -1,16 +1,16 @@
 import { useCallback, useEffect } from 'react';
-import classNames from '@/shared/lib/classNames/classNames';
-import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 
-import { Page } from '@/widgets/Page';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { initArticlePage } from '../../model/services/initArticlePage';
-import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import { fetchNextArticlePage } from '../../model/services/fetchNextArticlePage';
-import { ArticleFilters } from '../ArticleFilters/ArticleFilters';
-
+import { initArticlePage } from '../../model/services/initArticlePage';
 import { articlePageReducer } from '../../model/slice/ArticlePageSlice';
+import { ArticleFilters } from '../ArticleFilters/ArticleFilters';
+import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import styles from './Articles.module.scss';
+
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
+import classNames from '@/shared/lib/classNames/classNames';
+import { Page } from '@/widgets/Page';
 
 const reducers: ReducerList = {
     articlePage: articlePageReducer,

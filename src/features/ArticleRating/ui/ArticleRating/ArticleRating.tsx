@@ -1,9 +1,11 @@
 import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
+
+import { useArticleRating, useRateArticle } from '../../api/articleRatingApi';
+
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuth } from '@/entities/User';
 import { Skeleton } from '@/shared/ui/Skeleton';
-import { useArticleRating, useRateArticle } from '../../api/articleRatingApi';
 
 interface ArticleRatingProps {
     articleId: string;

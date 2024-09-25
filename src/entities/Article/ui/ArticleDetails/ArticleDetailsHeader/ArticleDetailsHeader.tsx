@@ -1,11 +1,13 @@
 import { memo } from 'react';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
-import EyeIcon from '@/shared/assets/svg/eye.svg';
-import CalendarIcon from '@/shared/assets/svg/calendar.svg';
+
 import { IArticle } from '../../../model/types/types';
-import { HStack, VStack } from '@/shared/ui/Stack';
 import styles from './ArticleDetailsHeader.module.scss';
+
+import CalendarIcon from '@/shared/assets/svg/calendar.svg';
+import EyeIcon from '@/shared/assets/svg/eye.svg';
+import { Avatar } from '@/shared/ui/Avatar';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
 
 interface ArticleDetailsHeaderProps extends Partial<IArticle> {
     className?: string;

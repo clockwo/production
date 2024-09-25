@@ -1,4 +1,5 @@
 import { memo } from 'react';
+
 import { IImageBlock } from '../../../model/types/types';
 import styles from './ArticleImageBlock.module.scss';
 

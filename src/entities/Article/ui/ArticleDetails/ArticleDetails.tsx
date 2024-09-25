@@ -1,23 +1,25 @@
 import { useEffect, useMemo } from 'react';
-import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import {
-    Text, TextAlign, TextColor, TextVariation,
-} from '@/shared/ui/Text';
-import { fetchArticleDetails } from '../../model/services/fetchArticleDetails/fetchArticleDetails';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { ArticleDetailsBlocks } from './ArticleDetailsBlocks/ArticleDetailsBlocks';
-import { ArticleDetailsHeader } from './ArticleDetailsHeader/ArticleDetailsHeader';
+import { useSelector } from 'react-redux';
+
 import {
     getArticleDetailsData,
     getArticleDetailsError,
     getArticleDetailsIsLoading,
 } from '../../model/selectors/articleDetails';
-import { ArticleDetailsErrors } from '../../model/types/articleDetailsSchema';
+import { fetchArticleDetails } from '../../model/services/fetchArticleDetails/fetchArticleDetails';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
+import { ArticleDetailsErrors } from '../../model/types/articleDetailsSchema';
+import { ArticleDetailsBlocks } from './ArticleDetailsBlocks/ArticleDetailsBlocks';
+import { ArticleDetailsHeader } from './ArticleDetailsHeader/ArticleDetailsHeader';
+
+import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
+import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
+import { Skeleton } from '@/shared/ui/Skeleton';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import {
+    Text, TextAlign, TextColor, TextVariation,
+} from '@/shared/ui/Text';
 
 interface ArticleDetailsProps {
     id: string

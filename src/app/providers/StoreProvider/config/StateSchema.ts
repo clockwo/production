@@ -2,17 +2,17 @@ import {
     EnhancedStore, Reducer, ReducersMapObject, UnknownAction,
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
+
+import { ArticleDetailsSchema } from '@/entities/Article';
 import type { CounterSchema } from '@/entities/Counter';
 import type { UserSchema } from '@/entities/User';
-import type { LoginSchema } from '@/features/AuthByUsername';
-
-import { ProfileSchema } from '@/features/EditableProfileCard';
-import { ArticleDetailsSchema } from '@/entities/Article';
-import { ArticleDetailsCommentsSchema } from '@/widgets/ArticleDetailsComments';
 import { AddNewCommentSchema } from '@/features/AddNewComment';
-import { ArticlePageSchema } from '@/pages/Articles';
+import type { LoginSchema } from '@/features/AuthByUsername';
+import { ProfileSchema } from '@/features/EditableProfileCard';
 import { ScrollSaveSchema } from '@/features/ScrollSave';
+import { ArticlePageSchema } from '@/pages/Articles';
 import { rtkApi } from '@/shared/api/rtkApi';
+import { ArticleDetailsCommentsSchema } from '@/widgets/ArticleDetailsComments';
 
 export interface StateSchema {
     counter: CounterSchema

@@ -1,5 +1,6 @@
 import { Popover as HPopover, PopoverButton, PopoverPanel } from '@headlessui/react';
 import { Fragment, ReactNode } from 'react';
+
 import styles from './Popover.module.scss';
 
 interface PopoverProps {

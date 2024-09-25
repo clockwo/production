@@ -1,14 +1,16 @@
 import { CSSProperties, FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import classNames from '@/shared/lib/classNames/classNames';
-import { Text, TextAlign, TextColor } from '@/shared/ui/Text';
-import { Input } from '@/shared/ui/Input';
-import { SpinnerLoader } from '@/shared/ui/SpinnerLoader';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Currency, CurrencySelect } from '@/entities/Currency';
-import { Country, CountrySelect } from '@/entities/Country';
+
 import { IProfile } from '../../model/types/types';
 import cls from './ProfileCard.module.scss';
+
+import { Country, CountrySelect } from '@/entities/Country';
+import { Currency, CurrencySelect } from '@/entities/Currency';
+import classNames from '@/shared/lib/classNames/classNames';
+import { Avatar } from '@/shared/ui/Avatar';
+import { Input } from '@/shared/ui/Input';
+import { SpinnerLoader } from '@/shared/ui/SpinnerLoader';
+import { Text, TextAlign, TextColor } from '@/shared/ui/Text';
 
 interface ProfileCardProps {
     className?: string,

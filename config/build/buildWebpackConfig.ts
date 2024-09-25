@@ -1,9 +1,10 @@
 import webpack from 'webpack';
-import { IBuildOptions } from './types/config';
+
+import { buildDevServer } from './buildDevServer';
 import { buildLoaders } from './buildLoaders';
 import { buildPlugins } from './buildPlugins';
 import { buildResolves } from './buildResolves';
-import { buildDevServer } from './buildDevServer';
+import { IBuildOptions } from './types/config';
 
 export function buildWebpackConfig(
     options: IBuildOptions,
