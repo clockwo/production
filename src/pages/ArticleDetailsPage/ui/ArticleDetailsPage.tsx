@@ -6,6 +6,7 @@ import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader/ArticleDeta
 import { ArticleDetails } from '@/entities/Article';
 import { ArticleRating } from '@/features/ArticleRating';
 import { ArticleRecommendation } from '@/features/ArticleRecommendation';
+import { getFeatureFlag, ToggleFeatures } from '@/shared/lib/features';
 import { VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 import { ArticleDetailsComments } from '@/widgets/ArticleDetailsComments';
@@ -14,6 +15,7 @@ import { Page } from '@/widgets/Page';
 const ArticleDetailsPage = () => {
     const { id } = useParams();
     const { t } = useTranslation();
+    const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled');
 
     if (!id) {
         return (
@@ -28,7 +30,11 @@ const ArticleDetailsPage = () => {
             <VStack gap="16" max>
                 <ArticleDetailsPageHeader />
                 <ArticleDetails id={id} />
-                <ArticleRating articleId={id} />
+                <ToggleFeatures
+                    feature="isArticleRatingEnabled"
+                    on={<ArticleRating articleId={id} />}
+                    off={<div>Тут что-то будет!</div>}
+                />
                 <ArticleRecommendation />
                 <ArticleDetailsComments articleId={id} />
             </VStack>
