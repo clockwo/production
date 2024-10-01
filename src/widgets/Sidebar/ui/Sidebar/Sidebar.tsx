@@ -8,25 +8,23 @@ import cls from './Sidebar.module.scss';
 import { LanguageSwitcher } from '@/features/LanguageSwitcher';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import classNames from '@/shared/lib/classNames/classNames';
+import { ToggleFeatures } from '@/shared/lib/features';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
 
 interface SidebarProps {
     className?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className }) => {
+const SideBarDeprecated = () => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
 
     const sidebarItemsList = useSelector(getSidebarItems);
-
     return (
         <div
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
-                className || '',
-            ])}
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [])}
             data-testid="sidebar"
         >
             <div className={cls.links}>
@@ -59,3 +57,18 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
         </div>
     );
 };
+
+export const Sidebar: FC<SidebarProps> = () => (
+    <ToggleFeatures
+        feature="isAppRedesign"
+        on={(
+            <div
+                className={classNames(cls.SidebarRe, {}, [])}
+                data-testid="sidebar"
+            >
+                123
+            </div>
+        )}
+        off={<SideBarDeprecated />}
+    />
+);

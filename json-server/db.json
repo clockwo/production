@@ -896,7 +896,8 @@
       ],
       "features": {
         "isArticleRatingEnabled": true,
-        "isCounterEnabled": true
+        "isCounterEnabled": true,
+        "isAppRedesign": true
       },
       "avatar": "https://play-lh.googleusercontent.com/Qen7AErcMTWKrlhPpQrMS6teGFffDDc3NHMlf7LbecC_Tlxp6OdaEUMLPJDnd1bT9w=w526-h296-rw",
       "jsonSettings": {

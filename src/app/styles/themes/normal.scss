@@ -2,18 +2,25 @@
   --background-color: rgb(255, 255, 255);
   --inverted-background: #121212;
   --trasperent-background: rgba(0, 0, 0, 0.2);
-
   --primary-color: rgba(0, 0, 0, 0.87);
   --inverted-primary-color: #fff;
-
   --secondary-color: rgba(0, 0, 0, 0.6);
   --inverted-secondary-color: rgba(255, 255, 255, 0.7);
-
   --red-color: rgb(255, 0, 0);
-
   //  Skeleton
   --skeleton-color: #e2e5e7;
-
   // Card
   --card-background: rgba(245, 245, 245, 1);
+
+
+  //  Redesigned
+  --background-re-dark: rgb(9, 15, 17);
+  --background-re: rgb(12, 18, 20);
+  --background-re-light: rgb(21, 28, 31);
+  --text-re-color: rgb(219, 219, 219);
+  --hint-re-color: rgb(85, 85, 85);
+  --cancel-re-color: rgb(217, 87, 87);
+  --save-re-color: rgb(108, 217, 139);
+  --icon-re-color: rgb(116, 162, 178);
+  --accent-re-color: rgb(94, 211, 243);
 }

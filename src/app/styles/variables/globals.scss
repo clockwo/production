@@ -1,5 +1,7 @@
 :root {
   --font-family-main: system-ui, sans-serif;
+  --font-family-text: "Roboto", sans-serif;
+  --font-family-header: "Nunito Sans", sans-serif;
 
   --font-size-m: 1rem;
   --font-line-m: 1.5rem;
@@ -18,6 +20,12 @@
 
   --sidebar-width: 18.75rem;
   --sidebar-collapsed-width: 5rem;
+
+  //  redesigned
+  --font-m-re: var(--font-size-m) / var(--font-line-m) var(--font-family-text);
+  --font-l-re: var(--font-size-l) / var(--font-line-l) var(--font-family-header);
+  --font-xl-re: var(--font-size-xl) / var(--font-line-xl) var(--font-family-header);
+
 }
 
 

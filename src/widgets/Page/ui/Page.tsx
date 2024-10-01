@@ -12,6 +12,7 @@ import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useInfinityScroll } from '@/shared/hooks/useInfinityScroll/useInfinityScroll';
 import { useThrottle } from '@/shared/hooks/useThrottle/useThrottle';
 import classNames from '@/shared/lib/classNames/classNames';
+import { toggleFeatures } from '@/shared/lib/features';
 
 interface PageProps {
     className?: string;
@@ -50,7 +51,16 @@ export const Page = memo((props: PageProps) => {
     }, 200);
 
     return (
-        <section id={PAGE_ID} onScroll={onScroll} ref={wrapperRef} className={classNames(styles.Page, {}, [className])}>
+        <section
+            id={PAGE_ID}
+            onScroll={onScroll}
+            ref={wrapperRef}
+            className={classNames(toggleFeatures({
+                name: 'isAppRedesign',
+                on: () => styles.PageRe,
+                off: () => styles.Page,
+            }), {}, [className])}
+        >
             {children}
             <div ref={triggerRef} />
         </section>
