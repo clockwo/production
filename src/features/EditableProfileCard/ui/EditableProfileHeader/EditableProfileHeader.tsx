@@ -8,9 +8,9 @@ import { updateProfileData } from '../../model/services/updateProfileData/update
 import { profileActions } from '../../model/slice/profileSlice';
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
-import { HStack } from '@/shared/ui/Stack';
-import { Text, TextSize } from '@/shared/ui/Text';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/depricated/Button';
+import { HStack } from '@/shared/ui/depricated/Stack';
+import { Text, TextSize } from '@/shared/ui/depricated/Text';
 
 interface EditableProfileHeaderProps {
     isEditor: boolean

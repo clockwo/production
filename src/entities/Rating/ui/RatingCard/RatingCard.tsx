@@ -6,13 +6,13 @@ import styles from './RatingCard.module.scss';
 
 import { useModal } from '@/shared/hooks/useModal/useModal';
 import classNames from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { Drawer } from '@/shared/ui/Drawer';
-import { Input } from '@/shared/ui/Input';
-import { Modal } from '@/shared/ui/Modal';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { StarRating } from '@/shared/ui/StarRating';
-import { Text, TextColor } from '@/shared/ui/Text';
+import { Button, ButtonTheme } from '@/shared/ui/depricated/Button';
+import { Drawer } from '@/shared/ui/depricated/Drawer';
+import { Input } from '@/shared/ui/depricated/Input';
+import { Modal } from '@/shared/ui/depricated/Modal';
+import { HStack, VStack } from '@/shared/ui/depricated/Stack';
+import { StarRating } from '@/shared/ui/depricated/StarRating';
+import { Text, TextColor } from '@/shared/ui/depricated/Text';
 
 interface RatingCardProps {
     className?: string;

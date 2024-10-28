@@ -18,8 +18,8 @@ import { Currency } from '@/entities/Currency';
 import { ProfileCard } from '@/entities/Profile';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { VStack } from '@/shared/ui/Stack';
-import { Text, TextColor } from '@/shared/ui/Text';
+import { VStack } from '@/shared/ui/depricated/Stack';
+import { Text, TextColor } from '@/shared/ui/depricated/Text';
 
 interface EditableProfileCardProps {
     id: string;

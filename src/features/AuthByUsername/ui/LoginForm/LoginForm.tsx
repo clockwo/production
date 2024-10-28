@@ -15,10 +15,10 @@ import cls from './LoginForm.module.scss';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { useTheme } from '@/shared/hooks/useTheme/useTheme';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { DotsLoader } from '@/shared/ui/DotsLoader';
-import { Input } from '@/shared/ui/Input';
-import { Text, TextColor, TextVariation } from '@/shared/ui/Text';
+import { Button, ButtonTheme } from '@/shared/ui/depricated/Button';
+import { DotsLoader } from '@/shared/ui/depricated/DotsLoader';
+import { Input } from '@/shared/ui/depricated/Input';
+import { Text, TextColor, TextVariation } from '@/shared/ui/depricated/Text';
 
 const initialReducers: ReducerList = {
     login: loginReducer,

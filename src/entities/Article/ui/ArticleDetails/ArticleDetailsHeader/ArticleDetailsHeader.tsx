@@ -5,9 +5,9 @@ import styles from './ArticleDetailsHeader.module.scss';
 
 import CalendarIcon from '@/shared/assets/svg/calendar.svg';
 import EyeIcon from '@/shared/assets/svg/eye.svg';
-import { Avatar } from '@/shared/ui/Avatar';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { Text, TextAlign, TextSize } from '@/shared/ui/Text';
+import { Avatar } from '@/shared/ui/depricated/Avatar';
+import { HStack, VStack } from '@/shared/ui/depricated/Stack';
+import { Text, TextAlign, TextSize } from '@/shared/ui/depricated/Text';
 
 interface ArticleDetailsHeaderProps extends Partial<IArticle> {
     className?: string;

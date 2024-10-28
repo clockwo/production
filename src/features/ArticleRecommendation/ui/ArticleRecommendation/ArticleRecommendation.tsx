@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useArticleRecommendationApi } from '../../api/articleRecommendationApi';
 
 import { ArticleList, ArticleView } from '@/entities/Article';
-import { VStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
+import { VStack } from '@/shared/ui/depricated/Stack';
+import { Text } from '@/shared/ui/depricated/Text';
 
 const POST_FOR_LOAD_COUNT = 5;
 

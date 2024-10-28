@@ -7,10 +7,10 @@ import cls from './ProfileCard.module.scss';
 import { Country, CountrySelect } from '@/entities/Country';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import classNames from '@/shared/lib/classNames/classNames';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Input } from '@/shared/ui/Input';
-import { SpinnerLoader } from '@/shared/ui/SpinnerLoader';
-import { Text, TextAlign, TextColor } from '@/shared/ui/Text';
+import { Avatar } from '@/shared/ui/depricated/Avatar';
+import { Input } from '@/shared/ui/depricated/Input';
+import { SpinnerLoader } from '@/shared/ui/depricated/SpinnerLoader';
+import { Text, TextAlign, TextColor } from '@/shared/ui/depricated/Text';
 
 interface ProfileCardProps {
     className?: string,

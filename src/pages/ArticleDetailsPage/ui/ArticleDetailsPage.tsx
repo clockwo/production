@@ -7,8 +7,8 @@ import { ArticleDetails } from '@/entities/Article';
 import { ArticleRating } from '@/features/ArticleRating';
 import { ArticleRecommendation } from '@/features/ArticleRecommendation';
 import { getFeatureFlag, ToggleFeatures } from '@/shared/lib/features';
-import { VStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
+import { VStack } from '@/shared/ui/depricated/Stack';
+import { Text } from '@/shared/ui/depricated/Text';
 import { ArticleDetailsComments } from '@/widgets/ArticleDetailsComments';
 import { Page } from '@/widgets/Page';
 

@@ -5,7 +5,7 @@ import { AppRouteProps, routeConfig } from '../model/routeConfig';
 import { RequireAuth } from '../ui/RequireAuth';
 import { RequireRoles } from '../ui/RequireRoles';
 
-import { SpinnerLoader } from '@/shared/ui/SpinnerLoader';
+import { SpinnerLoader } from '@/shared/ui/depricated/SpinnerLoader';
 import { Page } from '@/widgets/Page';
 import { PageLoader } from '@/widgets/PageLoader';
 

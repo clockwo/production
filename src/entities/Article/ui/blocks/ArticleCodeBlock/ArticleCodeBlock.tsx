@@ -5,7 +5,7 @@ import styles from './ArticleCodeBlock.module.scss';
 
 import CopyIcon from '@/shared/assets/svg/copy.svg';
 import classNames from '@/shared/lib/classNames/classNames';
-import { Button } from '@/shared/ui/Button';
+import { Button } from '@/shared/ui/depricated/Button';
 
 interface ArticleCodeBlockProps extends Partial<ICodeBlock> {
     className?: string;

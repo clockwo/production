@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import styles from './PageLoader.module.scss';
 
-import { VStack } from '@/shared/ui/Stack';
+import { VStack } from '@/shared/ui/depricated/Stack';
 
 interface PageLoaderProps {
     children: ReactNode;

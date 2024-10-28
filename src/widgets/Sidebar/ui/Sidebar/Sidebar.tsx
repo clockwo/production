@@ -9,7 +9,7 @@ import { LanguageSwitcher } from '@/features/LanguageSwitcher';
 import { ThemeSwitcher } from '@/features/ThemeSwitcher';
 import classNames from '@/shared/lib/classNames/classNames';
 import { ToggleFeatures } from '@/shared/lib/features';
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/depricated/Button';
 
 interface SidebarProps {
     className?: string;

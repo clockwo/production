@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import { getRouteArticle } from '@/shared/const/router';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
+import { Button, ButtonTheme } from '@/shared/ui/depricated/Button';
 
 export const ArticleDetailsPageHeader = () => {
     const navigate = useNavigate();

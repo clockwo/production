@@ -9,8 +9,8 @@ import styles from './AddNewComment.module.scss';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import classNames from '@/shared/lib/classNames/classNames';
-import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button';
-import { Input } from '@/shared/ui/Input';
+import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/depricated/Button';
+import { Input } from '@/shared/ui/depricated/Input';
 
 interface AddNewCommentProps {
     className?: string;

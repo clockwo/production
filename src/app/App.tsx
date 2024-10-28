@@ -19,7 +19,6 @@ function App() {
     }, [dispatch]);
 
     return (
-
         <ToggleFeatures
             feature="isAppRedesign"
             on={(

@@ -11,8 +11,8 @@ import { CommentList } from '@/entities/Comment';
 import { AddNewComment } from '@/features/AddNewComment';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { VStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
+import { VStack } from '@/shared/ui/depricated/Stack';
+import { Text } from '@/shared/ui/depricated/Text';
 
 const reducers: ReducerList = {
     articleDetailsComments: articleDetailsCommentsReducer,

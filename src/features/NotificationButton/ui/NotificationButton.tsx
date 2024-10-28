@@ -6,9 +6,9 @@ import styles from './NotificationButton.module.scss';
 import { NotificationList } from '@/entities/Notifications';
 import NotificationsIcon from '@/shared/assets/svg/notifications.svg';
 import { useModal } from '@/shared/hooks/useModal/useModal';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { Drawer } from '@/shared/ui/Drawer';
-import { Popover } from '@/shared/ui/popups';
+import { Button, ButtonTheme } from '@/shared/ui/depricated/Button';
+import { Drawer } from '@/shared/ui/depricated/Drawer';
+import { Popover } from '@/shared/ui/depricated/popups';
 
 export const NotificationButton = memo(() => {
     const { isOpen, setOpen, setClose } = useModal();

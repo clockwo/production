@@ -15,11 +15,11 @@ import { ArticleDetailsHeader } from './ArticleDetailsHeader/ArticleDetailsHeade
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { HStack, VStack } from '@/shared/ui/Stack';
+import { Skeleton } from '@/shared/ui/depricated/Skeleton';
+import { HStack, VStack } from '@/shared/ui/depricated/Stack';
 import {
     Text, TextAlign, TextColor, TextVariation,
-} from '@/shared/ui/Text';
+} from '@/shared/ui/depricated/Text';
 
 interface ArticleDetailsProps {
     id: string

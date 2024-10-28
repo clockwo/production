@@ -5,7 +5,7 @@ import { useArticleRating, useRateArticle } from '../../api/articleRatingApi';
 
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuth } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/Skeleton';
+import { Skeleton } from '@/shared/ui/depricated/Skeleton';
 
 interface ArticleRatingProps {
     articleId: string;

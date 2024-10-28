@@ -4,7 +4,7 @@ import { ITextBlock } from '../../../model/types/types';
 import styles from './ArticleTextBlock.module.scss';
 
 import classNames from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/depricated/Text';
 
 interface ArticleTextBlockProps extends Partial<ITextBlock> {
     className?: string;

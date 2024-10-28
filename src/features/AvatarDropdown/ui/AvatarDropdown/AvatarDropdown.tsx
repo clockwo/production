@@ -4,8 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { getUserAuth, isUserAdmin, userActions } from '@/entities/User';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/router';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Dropdown } from '@/shared/ui/popups';
+import { Avatar } from '@/shared/ui/depricated/Avatar';
+import { Dropdown } from '@/shared/ui/depricated/popups';
 
 export const AvatarDropdown = memo(() => {
     const { t } = useTranslation('login');

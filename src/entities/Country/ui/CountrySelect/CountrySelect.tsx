@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { Country } from '../../model/types/types';
 
-import { ListBox } from '@/shared/ui/popups';
+import { ListBox } from '@/shared/ui/depricated/popups';
 
 interface CountrySelectProps {
     value?: Country

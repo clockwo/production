@@ -9,7 +9,7 @@ import { AvatarDropdown } from '@/features/AvatarDropdown';
 import { NotificationButton } from '@/features/NotificationButton';
 import { useModal } from '@/shared/hooks/useModal/useModal';
 import classNames from '@/shared/lib/classNames/classNames';
-import { HStack } from '@/shared/ui/Stack';
+import { HStack } from '@/shared/ui/depricated/Stack';
 
 interface INavbarProps {
     className?: string;

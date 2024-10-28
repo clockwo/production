@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 
 import { LoginFormAsync as LoginForm } from '../LoginForm/LoginForm.async';
 
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { Modal } from '@/shared/ui/Modal';
-import { SpinnerLoader } from '@/shared/ui/SpinnerLoader';
+import { Button, ButtonTheme } from '@/shared/ui/depricated/Button';
+import { Modal } from '@/shared/ui/depricated/Modal';
+import { SpinnerLoader } from '@/shared/ui/depricated/SpinnerLoader';
 
 interface LoginModalProps {
     setOpen: () => void;

@@ -19,8 +19,8 @@ import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { useDebounce } from '@/shared/hooks/useDebounce/useDebounce';
 import classNames from '@/shared/lib/classNames/classNames';
 import { SortOrder } from '@/shared/types';
-import { Input } from '@/shared/ui/Input';
-import { TabItem, Tabs } from '@/shared/ui/Tabs';
+import { Input } from '@/shared/ui/depricated/Input';
+import { TabItem, Tabs } from '@/shared/ui/depricated/Tabs';
 
 interface ArticleFiltersProps {
     className?: string;

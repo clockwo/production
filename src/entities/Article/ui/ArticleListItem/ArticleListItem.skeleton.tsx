@@ -4,7 +4,7 @@ import { ArticleView } from '../../model/consts/consts';
 import styles from './ArticleListItem.module.scss';
 
 import classNames from '@/shared/lib/classNames/classNames';
-import { Skeleton } from '@/shared/ui/Skeleton';
+import { Skeleton } from '@/shared/ui/depricated/Skeleton';
 
 interface ArticleListItemSkeletonProps {
     className?: string;

@@ -6,7 +6,7 @@ import styles from './ArticleSelectSort.module.scss';
 import { ArticleSortField } from '@/entities/Article';
 import classNames from '@/shared/lib/classNames/classNames';
 import { SortOrder } from '@/shared/types';
-import { Select, SelectOptions } from '@/shared/ui/Select';
+import { Select, SelectOptions } from '@/shared/ui/depricated/Select';
 
 interface ArticleSelectSortProps {
     className?: string;
