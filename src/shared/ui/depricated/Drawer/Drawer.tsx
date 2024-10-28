@@ -111,7 +111,9 @@ const DrawerAsync = ({ children, ...otherProps }: DrawerProps) => {
 
     return <DrawerContent {...otherProps}>{children}</DrawerContent>;
 };
-
+/**
+ *@deprecated
+ */
 export const Drawer = ({ children, ...otherProps }: DrawerProps) => (
     <AnimationProvider>
         <DrawerAsync {...otherProps}>{children}</DrawerAsync>

@@ -1,0 +1,31 @@
+.AppLogo {
+    position: relative;
+
+}
+
+.icon {
+    color: black;
+    z-index: 2;
+}
+
+.gradientOne, .gradientTwo {
+    pointer-events: none;
+}
+
+.gradientOne {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    opacity: 0.6;
+    background: radial-gradient(57.00% 57.00% at 50% 43%, rgba(94, 211, 243, 0.2), rgba(94, 211, 243, 0.13) 7.812%, rgba(94, 211, 243, 0.08) 29.687%, rgba(94, 211, 243, 0.04) 56.771%, rgba(94, 211, 243, 0.02) 77.604%, rgba(94, 211, 243, 0) 100%);
+}
+
+.gradientTwo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.6;
+    background: radial-gradient(30.00% 30.00% at 50% 50%, rgba(94, 211, 243, 0.18), rgba(94, 211, 243, 0.11) 25.546%, rgba(94, 211, 243, 0.07) 47.272%, rgba(94, 211, 243, 0.04) 69.656%, rgba(94, 211, 243, 0) 100%);;
+}

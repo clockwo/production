@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { HStack, VStack } from '@/shared/ui/redesign/Stack';
 
 import { IArticle } from '../../../model/types/types';
 import styles from './ArticleDetailsHeader.module.scss';
@@ -6,7 +7,6 @@ import styles from './ArticleDetailsHeader.module.scss';
 import CalendarIcon from '@/shared/assets/svg/calendar.svg';
 import EyeIcon from '@/shared/assets/svg/eye.svg';
 import { Avatar } from '@/shared/ui/depricated/Avatar';
-import { HStack, VStack } from '@/shared/ui/depricated/Stack';
 import { Text, TextAlign, TextSize } from '@/shared/ui/depricated/Text';
 
 interface ArticleDetailsHeaderProps extends Partial<IArticle> {

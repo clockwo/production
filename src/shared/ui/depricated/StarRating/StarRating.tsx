@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 
+import { HStack } from '../../redesign/Stack';
 import { Button, ButtonTheme } from '../Button/Button';
-import { HStack } from '../Stack';
 import styles from './StarRating.module.scss';
 
 import StarIcon from '@/shared/assets/svg/star.svg';
@@ -14,7 +14,9 @@ interface StarRatingProps {
 }
 
 const stars = [1, 2, 3, 4, 5];
-
+/**
+ *@deprecated
+ */
 export const StarRating = memo((props: StarRatingProps) => {
     const {
         className, rating = 0, onClick,

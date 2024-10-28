@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
+import { HStack } from '@/shared/ui/redesign/Stack';
 
 import cls from './Navbar.module.scss';
 
@@ -9,7 +10,6 @@ import { AvatarDropdown } from '@/features/AvatarDropdown';
 import { NotificationButton } from '@/features/NotificationButton';
 import { useModal } from '@/shared/hooks/useModal/useModal';
 import classNames from '@/shared/lib/classNames/classNames';
-import { HStack } from '@/shared/ui/depricated/Stack';
 
 interface INavbarProps {
     className?: string;

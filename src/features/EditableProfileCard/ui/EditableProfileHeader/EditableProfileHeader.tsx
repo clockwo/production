@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { HStack } from '@/shared/ui/redesign/Stack';
 
 import { getProfileData } from '../../model/selectors/getProfileData/getProfileData';
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
@@ -9,7 +10,6 @@ import { profileActions } from '../../model/slice/profileSlice';
 
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/depricated/Button';
-import { HStack } from '@/shared/ui/depricated/Stack';
 import { Text, TextSize } from '@/shared/ui/depricated/Text';
 
 interface EditableProfileHeaderProps {

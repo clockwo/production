@@ -11,6 +11,9 @@ interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
     className?: string;
 }
 
+/**
+ *@deprecated
+ */
 export const Skeleton = (props: SkeletonProps) => {
     const {
         width, height, radius, style, className, ...otherProps

@@ -36,6 +36,9 @@ interface TextProps {
     className?: string;
 }
 
+/**
+ *@deprecated
+ */
 export const Text = memo((props: TextProps) => {
     const {
         variation = TextVariation.NORMAL,

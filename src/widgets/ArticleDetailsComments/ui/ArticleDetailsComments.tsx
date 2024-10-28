@@ -1,6 +1,7 @@
 import { memo, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { VStack } from '@/shared/ui/redesign/Stack';
 
 import { getArticleCommentsIsLoading } from '../model/selectors/comments';
 import { addNewCommentForArticle } from '../model/services/addNewCommentForArticle/addNewCommentForArticle';
@@ -11,7 +12,6 @@ import { CommentList } from '@/entities/Comment';
 import { AddNewComment } from '@/features/AddNewComment';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { VStack } from '@/shared/ui/depricated/Stack';
 import { Text } from '@/shared/ui/depricated/Text';
 
 const reducers: ReducerList = {

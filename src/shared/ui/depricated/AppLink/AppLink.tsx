@@ -15,6 +15,9 @@ interface IAppLinkProps extends LinkProps {
     theme?: AppLinkTheme;
 }
 
+/**
+ *@deprecated
+ */
 export const AppLink = forwardRef<HTMLAnchorElement, IAppLinkProps>((props, ref) => {
     const {
         to,

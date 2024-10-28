@@ -15,7 +15,9 @@ interface AvatarProps {
 
 const defaultImage = 'https://static.vecteezy.com/system/resources/th'
     + 'umbnails/020/765/399/small/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg';
-
+/**
+ *@deprecated
+ */
 export const Avatar = memo(({
     className, url, size, alt, fallback,
 }: AvatarProps) => (

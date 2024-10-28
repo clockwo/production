@@ -1,6 +1,7 @@
 import { useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { VStack } from '@/shared/ui/redesign/Stack';
 
 import { canEditProfile } from '../model/selectors/canEditProfile/canEditProfile';
 import { getProfileError } from '../model/selectors/getProfileError/getProfileError';
@@ -18,7 +19,6 @@ import { Currency } from '@/entities/Currency';
 import { ProfileCard } from '@/entities/Profile';
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
-import { VStack } from '@/shared/ui/depricated/Stack';
 import { Text, TextColor } from '@/shared/ui/depricated/Text';
 
 interface EditableProfileCardProps {

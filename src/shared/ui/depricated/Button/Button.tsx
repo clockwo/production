@@ -27,6 +27,9 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode
 }
 
+/**
+ *@deprecated
+ */
 export const Button = forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
     const {
         className = '',

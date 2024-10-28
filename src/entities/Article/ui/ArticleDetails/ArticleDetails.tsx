@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { HStack, VStack } from '@/shared/ui/redesign/Stack';
 
 import {
     getArticleDetailsData,
@@ -16,7 +17,6 @@ import { ArticleDetailsHeader } from './ArticleDetailsHeader/ArticleDetailsHeade
 import { useAppDispatch } from '@/shared/hooks/useAppDispatch/useAppDispatch';
 import { ReducerList, useDynamicModuleLoad } from '@/shared/hooks/useDynamicModuleLoad/useDynamicModuleLoad';
 import { Skeleton } from '@/shared/ui/depricated/Skeleton';
-import { HStack, VStack } from '@/shared/ui/depricated/Stack';
 import {
     Text, TextAlign, TextColor, TextVariation,
 } from '@/shared/ui/depricated/Text';

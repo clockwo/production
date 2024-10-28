@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import { VStack } from '@/shared/ui/redesign/Stack';
 
 import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
@@ -7,7 +8,6 @@ import { ArticleDetails } from '@/entities/Article';
 import { ArticleRating } from '@/features/ArticleRating';
 import { ArticleRecommendation } from '@/features/ArticleRecommendation';
 import { getFeatureFlag, ToggleFeatures } from '@/shared/lib/features';
-import { VStack } from '@/shared/ui/depricated/Stack';
 import { Text } from '@/shared/ui/depricated/Text';
 import { ArticleDetailsComments } from '@/widgets/ArticleDetailsComments';
 import { Page } from '@/widgets/Page';

@@ -7,6 +7,9 @@ interface DotsLoaderProps {
     theme: Theme
 }
 
+/**
+ *@deprecated
+ */
 export const DotsLoader = ({ theme }: DotsLoaderProps) => (
     <div className={classNames(cls.DotsLoader, {}, [cls[theme]])} />
 );

@@ -12,6 +12,9 @@ interface ModalProps {
     children: ReactNode;
 }
 
+/**
+ *@deprecated
+ */
 export const Modal = (props: ModalProps) => {
     const { isOpen, onClose, children } = props;
     const { isClosing, onCloseHandler } = useModalAnimated({ onClose, animationDelay: 300, isOpen });

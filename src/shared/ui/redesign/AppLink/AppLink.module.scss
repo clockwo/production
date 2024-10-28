@@ -1,0 +1,21 @@
+.AppLink {
+    text-decoration: none;
+}
+
+.primary {
+    color: var(--text-re-color);
+
+    &:hover {
+        color: var(--accent-re-color);
+    }
+}
+
+.red {
+    color: var(--cancel-re-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

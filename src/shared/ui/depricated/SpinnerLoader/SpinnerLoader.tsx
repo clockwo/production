@@ -5,6 +5,9 @@ interface SpinnerLoaderProps {
     padding?: number;
 }
 
+/**
+ *@deprecated
+ */
 export const SpinnerLoader = (props: SpinnerLoaderProps) => {
     const { width, padding } = props;
 

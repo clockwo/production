@@ -11,6 +11,9 @@ interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
     borderRadius?: number | string;
 }
 
+/**
+ *@deprecated
+ */
 export const AppImage = (props: AppImageProps) => {
     const {
         className,

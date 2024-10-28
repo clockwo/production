@@ -1,10 +1,11 @@
+import { VStack } from '@/shared/ui/redesign/Stack';
+
 import { useNotifications } from '../../api/notificationsApi';
 import { Notification } from '../Notification/Notification';
 import { NotificationSkeleton } from '../Notification/Notification.skeleton';
 import styles from './NotificationList.module.scss';
 
 import classNames from '@/shared/lib/classNames/classNames';
-import { VStack } from '@/shared/ui/depricated/Stack';
 
 interface NotificationListProps {
     className?: string;

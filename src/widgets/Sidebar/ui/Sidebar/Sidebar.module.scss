@@ -1,55 +1,109 @@
 .Sidebar {
-  width: var(--sidebar-width);
-  height: calc(100dvh - var(--navbar-height));
-  background-color: var(--inverted-background);
-  transition: width 0.3s ease;
-  position: relative;
+    width: var(--sidebar-width);
+    height: calc(100dvh - var(--navbar-height));
+    background-color: var(--inverted-background);
+    transition: width 0.3s ease;
+    position: relative;
+
+
+    .collapsedButton {
+        position: absolute;
+        bottom: 21px;
+        right: -40px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-inline: auto;
+        max-width: fit-content;
+        margin-top: 1.25rem;
+
+        span {
+            min-width: 8ch;
+        }
+    }
+
+    .switchers {
+        position: absolute;
+        bottom: 1.25rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+
+        &.switchersCollapsed {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
 }
 
 .collapsed {
-  width: var(--sidebar-collapsed-width);
+    width: var(--sidebar-collapsed-width);
 }
 
-.collapsedButton {
-  position: absolute;
-  bottom: 21px;
-  right: -40px;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem;
-  margin-inline: auto;
-  max-width: fit-content;
-  margin-top: 1.25rem;
-
-  span {
-    min-width: 8ch;
-  }
-}
-
-
-.switchers {
-  position: absolute;
-  bottom: 1.25rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-
-  &.switchersCollapsed {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
 // Redesign
 
 .SidebarRe {
-  width: 220px;
-  height: 100%;
-  border-radius: 32px;
-  background-color: var(--background-re-light);
+    position: relative;
+    width: 220px;
+    height: 100%;
+    border-radius: 32px;
+    background-color: var(--background-re-light);
+
+
+    .appLogo {
+        padding-top: 22px;
+    }
+
+    .links {
+        font: var(--font-m);
+        font-family: var(--font-family-header);
+        margin-top: 42px;
+        padding-left: 16px;
+    }
+
+    .collapsedButton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        padding: 12px;
+        box-sizing: content-box;
+    }
+
+    .switchers {
+        position: absolute;
+        bottom: 1.25rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+
+        &.switchersCollapsed {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &.collapsed {
+        width: 50px;
+
+        .links {
+            padding: 0;
+            align-items: center;
+        }
+
+        .collapsedButton {
+            right: 50%;
+            transform: translateX(-50%);
+            padding: 0;
+            rotate: -180deg;
+        }
+    }
+
 }

@@ -16,6 +16,9 @@ interface TabsProps<T extends string> {
     onClick?: (tab: TabItem<T>) => void;
 }
 
+/**
+ *@deprecated
+ */
 export const Tabs = <T extends string>(props: TabsProps<T>) => {
     const {
         className,

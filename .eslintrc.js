@@ -4,11 +4,7 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended',
-        'plugin:react/jsx-runtime',
-        'airbnb',
-        'plugin:react-hooks/recommended',
-    ],
+    extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'airbnb', 'plugin:react-hooks/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -22,9 +18,7 @@ module.exports = {
         indent: [2, 4],
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
-        'react/jsx-filename-extension': [2,
-            { extensions: ['.js', '.jsx', '.tsx'] },
-        ],
+        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
         'react/react-in-jsx-scope': 'off',
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -43,29 +37,41 @@ module.exports = {
         'no-undef': 'off',
         'react/no-array-index-key': 'off',
         'zerg314-plugin/path-checker': ['error', { alias: '@' }],
-        'zerg314-plugin/layer-imports': ['error', {
-            ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
-            alias: '@',
-        }],
-        'zerg314-plugin/public-api-import': ['error', {
-            alias: '@',
-            testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx'],
-        }],
-        'simple-import-sort/imports': ['error', {
-            groups: [
-                ['^\\u0000'],
-                ['^node:'],
-                ['^app/'],
-                ['^pages/'],
-                ['^widgets/'],
-                ['^features/'],
-                ['^entities/'],
-                ['^shared/'],
-                ['^@?\\w'],
-                ['^\\.'],
-            ],
-        }],
-        'simple-import-sort/exports': 'error',
+        'zerg314-plugin/layer-imports': [
+            'error',
+            {
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+                alias: '@',
+            },
+        ],
+        'zerg314-plugin/public-api-import': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx'],
+            },
+        ],
+        'simple-import-sort/imports': [
+            'off',
+            {
+                groups: [
+                    ['^\\u0000'],
+                    ['^node:'],
+                    ['^app/'],
+                    ['^pages/'],
+                    ['^widgets/'],
+                    ['^features/'],
+                    ['^entities/'],
+                    ['^shared/'],
+                    ['^@?\\w'],
+                    ['^\\.'],
+                ],
+            },
+        ],
+        'simple-import-sort/exports': 'off',
+        'react/jsx-wrap-multilines': 'off',
+        'object-curly-newline': 'off',
+        'react/destructuring-assignment': 'off',
     },
     globals: {
         __IS_DEV__: true,

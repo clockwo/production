@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { useTranslation } from 'react-i18next';
+import { HStack, VStack } from '@/shared/ui/redesign/Stack';
 
 import styles from './RatingCard.module.scss';
 
@@ -10,7 +11,6 @@ import { Button, ButtonTheme } from '@/shared/ui/depricated/Button';
 import { Drawer } from '@/shared/ui/depricated/Drawer';
 import { Input } from '@/shared/ui/depricated/Input';
 import { Modal } from '@/shared/ui/depricated/Modal';
-import { HStack, VStack } from '@/shared/ui/depricated/Stack';
 import { StarRating } from '@/shared/ui/depricated/StarRating';
 import { Text, TextColor } from '@/shared/ui/depricated/Text';
 
