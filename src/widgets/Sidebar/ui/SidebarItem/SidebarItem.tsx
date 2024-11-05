@@ -29,7 +29,7 @@ export const SidebarItem = memo((props: SidebarItemProps) => {
         <ToggleFeatures
             feature="isAppRedesign"
             on={
-                <AppLink activeClass={styles.activeLink} to={path} className={styles.link}>
+                <AppLink activeClass={styles.activeLinkRe} to={path} className={styles.linkRe}>
                     <Icon width={16} height={16} Svg={SvgIcon} />
                     {!collapsed && <span>{t(text)}</span>}
                 </AppLink>

@@ -14,15 +14,17 @@ interface IAppLinkProps extends LinkProps {
 }
 
 export const AppLink = forwardRef<HTMLAnchorElement, IAppLinkProps>((props, ref) => {
-    const { to, className, variant = 'primary', children, ...otherProps } = props;
+    const { to, className, variant = 'primary', children, activeClass, ...otherProps } = props;
 
     return (
         <NavLink
             to={to}
             ref={ref}
-            className={({ isActive }) =>
-                classNames(styles.AppLink, { [props.activeClass]: isActive }, [className, styles[variant]])
-            }
+            className={({ isActive }) => classNames(
+                styles.AppLink,
+                { [activeClass as string]: isActive },
+                [className, styles[variant]],
+            )}
             {...otherProps}
         >
             {children}

@@ -8,7 +8,7 @@ const classNames = (
     cls,
     ...additional,
     ...Object.entries(mods)
-        .filter(([className, value]) => value)
+        .filter(([className, value]) => Boolean(value))
         .map(([className, value]) => className),
 ].join(' ').trim();
 
